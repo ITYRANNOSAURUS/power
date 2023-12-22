@@ -8,13 +8,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="/powerprice.js"></script>
     <script src="/poweruse.js"></script>
+
+    <style>
+        .main {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+            text-align: center;
+            flex-direction: column;
+            z-index: 1;
+        }
+
+        .main a {
+            text-decoration: none;
+            /* 기본 링크 텍스트 스타일 제거 */
+        }
+
+        .main-title {
+            margin-bottom: 3rem;
+        }
+
+
+        .hover h1 {
+            margin-top: 1rem;
+            /* 상단 간격 조절 */
+            cursor: pointer;
+            /* 커서를 포인터로 변경하여 클릭 가능한 것으로 나타냄 */
+            transition: color 0.3s;
+            /* hover 효과를 위한 전이 효과 설정 */
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hover h1:hover {
+            color: purple;
+            /* hover 시 글자 색상 변경 */
+        }
+
+        .videoContainer {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="videoContainer">
+        <!-- 배경 동영상 추가 -->
+        <video playsinline autoplay muted loop id="bgvid"
+            style="position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; object-fit: cover;">
+            <source src="src/background.mp4" type="video/mp4">
+        </video>
+    </div>
 
-    <div style="width: 900px; height: 900px;">
-        <h1>미래의 전력 단가, 전력 소비량을 알아보세요.</h1>
+    <a href="/">
+        <img src="src/logo.svg" alt="Logo"
+            style="position: absolute; top: 0rem; left: 3rem; width: 18rem; height: 10rem;">
+    </a>
 
+    <div class="main">
+        <div class="main-title">
+            <h1>미래의 전력 단가, 전력 소비량을 알아보세요.</h1>
+        </div>
+        <div class="hover">
+            <h1 onclick="window.location.href='/powerprice'">📈전력가격 보기 ▶️</h1>
+            <h1 onclick="window.location.href='/poweruse'"> 📈전력소비량 보기▶️</h1>
+        </div>
     </div>
 
     <div style="width: 900px; height: 900px;">
