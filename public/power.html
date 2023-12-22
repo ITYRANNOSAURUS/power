@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전력가격 및 전력 소비량 계산기</title>
+    <title>전기가격 및 전력 소비량 계산기</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="/powerprice.js"></script>
     <script src="/poweruse.js"></script>
 
     <style>
+        body {
+            font-family: 'GongGothicLight', sans-serif;
+        }
+
         .main {
             position: relative;
             display: flex;
@@ -21,13 +25,20 @@
             z-index: 1;
         }
 
-        .main a {
-            text-decoration: none;
-            /* 기본 링크 텍스트 스타일 제거 */
-        }
 
         .main-title {
             margin-bottom: 3rem;
+            animation: main_title_animation 1s ease;
+        }
+
+        .title-highlight1 {
+            color: #CE295B;
+            /* 원하는 색상 코드로 변경하세요 */
+        }
+
+        .title-highlight2 {
+            color: #2950CE;
+            /* 원하는 색상 코드로 변경하세요 */
         }
 
 
@@ -42,8 +53,13 @@
             margin-bottom: 2rem;
         }
 
-        .hover h1:hover {
-            color: purple;
+        .hover1 h1:hover {
+            color: #CE295B;
+            /* hover 시 글자 색상 변경 */
+        }
+
+        .hover2 h1:hover {
+            color: #2950CE;
             /* hover 시 글자 색상 변경 */
         }
 
@@ -52,6 +68,33 @@
             height: 100vh;
             overflow: hidden;
             z-index: -1;
+        }
+
+        #bgvid {
+            opacity: 0.5;
+        }
+
+        .main-title {
+            top: 20%;
+            position: absolute;
+            animation: main_title_animation 1s es
+        }
+
+        @keyframes main_title_animation {
+            from {
+                left: 0
+            }
+
+            to {
+                left: 30%;
+            }
+        }
+
+        @font-face {
+            font-family: 'GongGothicLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
     </style>
 </head>
@@ -72,19 +115,24 @@
 
     <div class="main">
         <div class="main-title">
-            <h1>미래의 전력 단가, 전력 소비량을 알아보세요.</h1>
+            <h1>미래의 <span class="title-highlight1">전기 단가</span>, <span class="title-highlight2">전력 소비량</span>을 알아보세요.
+            </h1>
         </div>
         <div class="hover">
-            <h1 onclick="window.location.href='/powerprice'">📈전력가격 보기 ▶️</h1>
-            <h1 onclick="window.location.href='/poweruse'"> 📈전력소비량 보기▶️</h1>
+            <div class="hover1">
+                <h1 onclick="window.location.href='/powerprice'">📈전기 단가 계산기 바로가기 ▶️</h1>
+            </div>
+            <div class="hover2">
+                <h1 onclick="window.location.href='/poweruse'"> 📈전력 소비량 계산기 바로가기▶️</h1>
+            </div>
         </div>
     </div>
 
     <div style="width: 900px; height: 900px;">
-        <h1>미래 전력 가격 계산기</h1>
+        <h1>미래 전기 단가 계산기</h1>
 
         <div id="powerprice-container">
-            <input type="number" id="powerprice-yearInput" placeholder="년도를 입력하세요.">
+            <input type="number" id="powerprice-yearInput" placeholder="연도를 입력하세요.">
             <button onclick="getPowerPrice()">확인</button>
             <p id="powerprice-result"></p>
 
@@ -102,7 +150,7 @@
         <h1>미래 1인당 전력 소비량 계산기</h1>
 
         <div id="poweruse-container">
-            <input type="number" id="poweruse-yearInput" placeholder="년도를 입력하세요.">
+            <input type="number" id="poweruse-yearInput" placeholder="연도를 입력하세요.">
             <button onclick="getPowerConsumption()">확인</button>
             <p id="poweruse-result"></p>
         </div>
