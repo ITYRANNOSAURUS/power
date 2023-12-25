@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>전력가격 및 전력 소비량 계산기</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- <script src="Chart.js"></script> -->
     <script src="powerprice.js"></script>
     <script src="poweruse.js"></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <a href="/">
-        <img src="src/logo.svg" alt="Logo"
-            style="position: absolute; top: 0rem; left: 3rem; width: 18rem; height: 10rem;">
+      <img
+        src="src/logo.svg"
+        alt="Logo"
+        style="
+          position: absolute;
+          top: 0rem;
+          left: 3rem;
+          width: 18rem;
+          height: 10rem;
+        "
+      />
     </a>
 
     <h1>미래 1인당 전력 소비량 계산기</h1>
-
+    <p>1955년 ~ 2070년 사이의 연도만 입력할 수 있습니다.</p>
     <div id="poweruse-container">
-        <input type="number" id="poweruse-yearInput" placeholder="년도를 입력하세요.">
-        <button onclick="getPowerConsumption()">확인</button>
-        <p id="poweruse-result"></p>
-
-
+      <input
+        type="number"
+        id="poweruse-yearInput"
+        placeholder="년도를 입력하세요."
+      />
+      <button onclick="getPowerConsumption()">확인</button>
+      <p id="poweruse-result"></p>
     </div>
 
-    <div style="width: 900px; height: 900px;">
-        <!--차트가 그려질 부분-->
-        <canvas id="useChart"></canvas>
+    <div style="width: 900px; height: 900px">
+      <!--차트가 그려질 부분-->
+      <canvas id="useChart"></canvas>
     </div>
     <script src="uChart.js"></script>
 
     <!-- <h1>미래 1인당 전력 소비량 * 전력 가격 계산기</h1> -->
-
-
-
-
-
-
-</body>
-
+  </body>
 </html>
