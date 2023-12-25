@@ -6,9 +6,11 @@
     <title>전력가격 및 전력 소비량 계산기</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- <script src="Chart.js"></script> -->
-    <script src="powerprice.js"></script>
-    <script src="poweruse.js"></script>
+    <script src="js/powerprice.js"></script>
+    <script src="js/poweruse.js"></script>
+    <link rel="stylesheet" href="css/powerprice.css">
   </head>
+
 
   <body>
     <a href="/">
@@ -25,23 +27,71 @@
       />
     </a>
 
-    <h1>미래 전력 가격 계산기</h1>
-    <p>1955년 ~ 2070년 사이의 연도만 입력할 수 있습니다.</p>
+    <h1 class="price-title">
+      📈미래 <span style="color: #ce295b">전기 단가</span> 계산기
+    </h1>
+    <p class="price-main">원하시는 연도를 입력하세요.</p>
+    <p class="price-intro">
+      1995년-2022년의 단가는 실제 데이터입니다. 2023년-2070년의 단가는 예측
+      데이터입니다.
+    </p>
     <div id="powerprice-container">
       <input
         type="number"
         id="powerprice-yearInput"
-        placeholder="년도를 입력하세요."
+        placeholder="연도를 입력하세요."
       />
       <button onclick="getPowerPrice()">확인</button>
       <p id="powerprice-result"></p>
-    </div>
+      <span style="font-weight: bold">1955년 ~ 2070년</span> 사이의 연도만
+      입력할 수 있습니다.
+    </p>
+      <p class="price-text">
 
-    <div style="width: 900px; height: 900px">
+    
+      </div>
+
+    <div
+      style="
+        width: 60vw;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+      "
+    >
       <!--차트가 그려질 부분-->
       <canvas id="priceChart"></canvas>
     </div>
 
-    <script src="pChart.js"></script>
+    <div class="python">
+      <div class="python-textbox">
+        <div class="python-main">
+          <h1>
+            <span style="color: rgb(0, 136, 255)">scikit-learn</span>
+            라이브러리를 사용하여
+          </h1>
+          <h1>
+            <span style="color: rgb(228, 74, 74)"
+              >선형회귀(Linear Regression)</span
+            >
+            방식으로
+          </h1>
+          <h1>예측을 수행했습니다.</h1>
+        </div>
+        <p style="font-size: 1.2rem">
+          전기 단가, 전력 소비량 계산기의
+          <span style="font-weight: bold">1955년 - 2022년</span> 수치는 실제
+          데이터이고,
+        </p>
+        <p style="font-size: 1.2rem">
+          <span style="font-weight: bold">2023년 - 2070년</span> 수치는
+          예측값입니다.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/pChart.js"></script>
   </body>
 </html>

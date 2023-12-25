@@ -8,108 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전기가격 및 전력 소비량 계산기</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="/powerprice.js"></script>
-    <script src="/poweruse.js"></script>
-
-    <style>
-        body {
-            font-family: 'GongGothicLight', sans-serif;
-        }
-
-        .main {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 120vh;
-            text-align: center;
-            flex-direction: column;
-            z-index: 1;
-        }
+    <script src="js/powerprice.js"></script>
+    <script src="js/poweruse.js"></script>
+    <link rel="stylesheet" href="css/powerprice.css">
 
 
-        .main-title {
-            margin-bottom: 3rem;
-            animation: main_title_animation 1s ease;
-        }
-
-        .title-highlight1 {
-            color: #CE295B;
-            /* 원하는 색상 코드로 변경하세요 */
-        }
-
-        .title-highlight2 {
-            color: #2950CE;
-            /* 원하는 색상 코드로 변경하세요 */
-        }
-
-
-        .hover h1 {
-            margin-top: 1rem;
-            /* 상단 간격 조절 */
-            cursor: pointer;
-            /* 커서를 포인터로 변경하여 클릭 가능한 것으로 나타냄 */
-            transition: color 0.3s;
-            /* hover 효과를 위한 전이 효과 설정 */
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .hover1 h1:hover {
-            color: #CE295B;
-            /* hover 시 글자 색상 변경 */
-        }
-
-        .hover2 h1:hover {
-            color: #2950CE;
-            /* hover 시 글자 색상 변경 */
-        }
-
-        .videoContainer {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            z-index: -1;
-        }
-
-        #bgvid {
-            opacity: 0.5;
-        }
-
-        .main-title {
-            top: 20%;
-            position: absolute;
-            animation: main_title_animation 1s es
-        }
-
-        .python {
-            display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-        text-align: center;
-    }
-
-
-
-        @keyframes main_title_animation {
-            from {
-                left: 0
-            }
-
-            to {
-                left: 30%;
-            }
-        }
-
-        @font-face {
-            font-family: 'GongGothicLight';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-    </style>
 </head>
 
 <body>
@@ -142,10 +45,15 @@
     </div>
 
     <div class="python">
-        <h1>scikit-learn 라이브러리를 사용하여</h1>
-        <h1><span style="color: rgb(255, 0, 242);">선형회귀(Linear Regression)</span> 방식으로 예측을 수행했습니다.</h1>
-        <p>전기 단가, 전력 소비량 계산기의 1955년 - 2022년 수치는 실제 데이터이고, 2023년 - 2070년 수치는 예측값입니다.</p>
-
+        <div class="python-textbox">
+        <div class="python-main">
+        <h1><span style="color: rgb(0, 136, 255);">scikit-learn</span> 라이브러리를 사용하여</h1>
+        <h1><span style="color: rgb(228, 74, 74);">선형회귀(Linear Regression)</span> 방식으로 </h1>
+        <h1>예측을 수행했습니다.</h1>
+         </div>
+        <p style="font-size: 1.2rem;">전기 단가, 전력 소비량 계산기의 <span style="font-weight: bold;">1955년 - 2022년</span> 수치는 실제 데이터입니다. </p>
+        <p style="font-size: 1.2rem;"><span style="font-weight: bold">2023년 - 2070년</span> 수치는 이전 데이터를 바탕으로 한 출력한 예측값입니다.</p>
+    </div>
         </div>
 
 
@@ -180,6 +88,43 @@
             <canvas id="useChart"></canvas>
         </div>
         <script src="/uChart.js"></script>
+
+        <script>
+            var isAnimating = false;
+        
+            function handleScroll() {
+                var pythonElement = document.querySelector('.python');
+                var textboxElement = document.querySelector('.python-textbox');
+                var position = pythonElement.getBoundingClientRect();
+        
+                if (position.top <= 60 && position.top >= 40 && !isAnimating) {
+                    console.log("2")
+                    isAnimating = true;
+                    textboxElement.style.animation = 'none';
+                    setTimeout(function () {
+                        textboxElement.style.animation = '';
+                    }, 10);
+                    if (!textboxElement.classList.contains('animate')) {
+                        textboxElement.classList.add('animate');
+                    }
+                } else if (position.top < 40 || position.top > 60) {
+                    textboxElement.classList.remove('animate');
+                }
+            }
+        
+            window.addEventListener('scroll', handleScroll);
+        
+            document.querySelector('.python-textbox').addEventListener('animationend', function() {
+                isAnimating = false;
+            });
+        </script>
+        
+        
+        
+        
+        
+        
+        
 </body>
 
 </html>
