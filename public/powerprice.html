@@ -30,26 +30,32 @@
     <h1 class="price-title">
       📈미래 <span style="color: #ce295b">전기 단가</span> 계산기
     </h1>
-    <p class="price-main">원하시는 연도를 입력하세요.</p>
+    <p class="price-main">원하시는 연도를 입력하거나 선택하세요.</p>
     <p class="price-intro">
-      1995년-2022년의 단가는 실제 데이터입니다. 2023년-2070년의 단가는 예측
+      1955년-2022년의 단가는 실제 데이터이고, 2023년-2070년의 단가는 예측
       데이터입니다.
     </p>
     <div id="powerprice-container">
+      <div id="input-container">
       <input
-        type="number"
+        type="text"
         id="powerprice-yearInput"
-        placeholder="연도를 입력하세요."
+        placeholder="1955년~2070년 사이의 연도만 입력하실 수 있습니다."
       />
+      <select class="year-dropdown" id="year-dropdown" onchange="updateYearInput()">
+        <script>
+          for (let i = 1955; i <= 2070; i++) {
+            document.write('<option value="' + i + '">' + i + '</option>');
+          }
+        </script>
+      </select>
       <button onclick="getPowerPrice()">확인</button>
-      <p id="powerprice-result"></p>
-      <span style="font-weight: bold">1955년 ~ 2070년</span> 사이의 연도만
-      입력할 수 있습니다.
-    </p>
-      <p class="price-text">
+    </div>
+      <p id="powerprice-result"></p> <!-- 여기에 결과를 표시합니다. -->
+    </div>
+</body>
 
-    
-      </div>
+
 
     <div
       style="

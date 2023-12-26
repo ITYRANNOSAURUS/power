@@ -117,13 +117,42 @@ const powerPriceData = {
   2070: 202.5381069,
 };
 
+function updateYearInput() {
+  var yearInput = document.getElementById("powerprice-yearInput");
+  var yearDropdown = document.getElementById("year-dropdown");
+
+  // 선택한 연도를 입력 창에 설정
+  yearInput.value = yearDropdown.value;
+}
+
+window.onload = function () {
+  document
+    .getElementById("powerprice-yearInput")
+    .addEventListener("keydown", handleKeyPress);
+};
+
+function handleKeyPress(event) {
+  // 엔터 키를 눌렀을 때
+  if (event.key === "Enter") {
+    getPowerPrice();
+  }
+}
+
+function toggleYearDropdown() {
+  var yearDropdown = document.getElementById("year-dropdown");
+
+  // 토글 로직만 수행
+  yearDropdown.style.display =
+    yearDropdown.style.display === "none" ? "block" : "none";
+}
+
 function getPowerPrice() {
   let year = document.getElementById("powerprice-yearInput").value;
   let price = powerPriceData[year];
 
   if (price === undefined) {
     document.getElementById("powerprice-result").innerText =
-      year + "년도의 데이터는 아직 준비되지 않았습니다.";
+      year + "년의 데이터는 아직 준비되지 않았습니다.";
   } else {
     let baseYear = 2022;
     let basePrice = powerPriceData[baseYear];
