@@ -7,6 +7,26 @@ body {
   margin-bottom: 20rem;
 }
 
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 25rem;
+  /* 로고와의 간격 조절 */
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #ce295b;
+}
+
+
 .price-title {
   margin-bottom: 3rem;
   font-size: 2.5rem;

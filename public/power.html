@@ -8,14 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전기가격 및 전력 소비량 계산기</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="js/powerprice.js"></script>
-    <script src="js/poweruse.js"></script>
+    <script type="module" src="js/powerprice.js"></script>
+    <script type="module" src="js/poweruse.js"></script>
     <link rel="stylesheet" href="css/power.css">
 
 
 </head>
 
 <body>
+
     <div id="videoContainer">
         <!-- 배경 동영상 추가 -->
         <video playsinline autoplay muted loop id="bgvid"
@@ -26,8 +27,9 @@
 
     <a href="/">
         <img src="src/logo.svg" alt="Logo"
-            style="position: absolute; top: 0rem; left: 3rem; width: 18rem; height: 10rem;">
+            style="position: absolute; top: 0rem; left: 3rem; width: 18rem; height: 10rem; z-index: 10;">
     </a>
+
 
     <div class="main">
         <div class="main-title">
