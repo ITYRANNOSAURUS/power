@@ -80,16 +80,25 @@ body {
 }
 
 .python-textbox {
-  background-color: rgba(162, 162, 162, 0.121); /* 투명한 초록색 */
-  padding: 4rem; /* 텍스트와 상자의 간격 */
-  margin: 3rem 0; /* 상자 위아래 여백 */
-  width: 90%; /* 상자 너비 */
-  max-width: 50rem; /* 상자 최대 너비 */
+  background-color: rgba(162, 162, 162, 0.121);
+  /* 투명한 초록색 */
+  padding: 4rem;
+  /* 텍스트와 상자의 간격 */
+  margin: 3rem 0;
+  /* 상자 위아래 여백 */
+  width: 90%;
+  /* 상자 너비 */
+  max-width: 50rem;
+  /* 상자 최대 너비 */
 
-  opacity: 0; /* 처음에는 안보이게 */
-  animation-name: slideDown; /* 애니메이션 이름 설정 */
-  animation-duration: 3s; /* 애니메이션 지속 시간 설정 */
-  animation-fill-mode: forwards; /* 애니메이션 종료 후 마지막 속성값 유지 */
+  opacity: 0;
+  /* 처음에는 안보이게 */
+  animation-name: slideDown;
+  /* 애니메이션 이름 설정 */
+  animation-duration: 3s;
+  /* 애니메이션 지속 시간 설정 */
+  animation-fill-mode: forwards;
+  /* 애니메이션 종료 후 마지막 속성값 유지 */
 }
 
 @keyframes main_title_animation {
@@ -107,6 +116,7 @@ body {
     transform: translateY(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -115,8 +125,7 @@ body {
 
 @font-face {
   font-family: "GongGothicLight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

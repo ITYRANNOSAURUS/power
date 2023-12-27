@@ -123,8 +123,8 @@ const priceChartData = {
     {
       label: "전력 단가 (kWh/원)",
       data: Object.values(powerData),
-      backgroundColor: Object.keys(powerData).map(() => "lightgrey"), // 기본 색상으로 배열 채우기
-      borderColor: "rgba(75, 192, 192, 1)", // 막대 테두리 색상 설정
+      backgroundColor: Object.keys(powerData).map(() => "#00000012"), // 기본 색상으로 배열 채우기
+      borderColor: "#ce295b9f", // 막대 테두리 색상 설정
       borderWidth: 1,
     },
   ],
@@ -165,7 +165,7 @@ const priceChart = new Chart(ctx, config);
 
 function updateChart(year) {
   let color;
-  if (year < 2025) {
+  if (year < 2022) {
     color = "red";
   } else if (year < 2030) {
     color = "blue";
@@ -193,38 +193,3 @@ function updateChart(year) {
   }
 }
 
-// function updateChart() {
-//     // 사용자 입력 연도 가져오기
-//     const inputYear = document.getElementById('powerprice-yearInput').value;
-
-//     // 연도에 해당하는 데이터 가져오기
-//     const inputData = powerData[inputYear];
-
-//     // 차트 데이터 초기화
-//     priceChartData.labels = [];
-//     priceChartData.datasets[0].data = [];
-
-//     // 차트 데이터 업데이트
-//     priceChartData.labels.push(inputYear);
-//     priceChartData.datasets[0].data.push(inputData);
-
-//     // 차트 업데이트
-//     priceChart.update();
-// }
-
-// const config = {
-//     type: 'line',
-//     data: powerData,
-//     options: {
-//         responsive: true,
-//         plugins: {
-//             legend: {
-//                 position: 'top',
-//             },
-//             title: {
-//                 display: true,
-//                 text: 'Chart.js Line Chart'
-//             }
-//         }
-//     },
-// };

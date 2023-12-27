@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="js/powerprice.js"></script>
     <script src="js/poweruse.js"></script>
-    <link rel="stylesheet" href="css/powerprice.css">
+    <link rel="stylesheet" href="css/power.css">
 
 
 </head>
@@ -46,15 +46,17 @@
 
     <div class="python">
         <div class="python-textbox">
-        <div class="python-main">
-        <h1><span style="color: rgb(0, 136, 255);">scikit-learn</span> 라이브러리를 사용하여</h1>
-        <h1><span style="color: rgb(228, 74, 74);">선형회귀(Linear Regression)</span> 방식으로 </h1>
-        <h1>예측을 수행했습니다.</h1>
-         </div>
-        <p style="font-size: 1.2rem;">전기 단가, 전력 소비량 계산기의 <span style="font-weight: bold;">1955년 - 2022년</span> 수치는 실제 데이터입니다. </p>
-        <p style="font-size: 1.2rem;"><span style="font-weight: bold">2023년 - 2070년</span> 수치는 이전 데이터를 바탕으로 한 출력한 예측값입니다.</p>
-    </div>
+            <div class="python-main">
+                <h1><span style="color: rgb(0, 136, 255);">scikit-learn</span> 라이브러리를 사용하여</h1>
+                <h1><span style="color: rgb(228, 74, 74);">선형회귀(Linear Regression)</span> 방식으로 </h1>
+                <h1>예측을 수행했습니다.</h1>
+            </div>
+            <p style="font-size: 1.2rem;">전기 단가, 전력 소비량 계산기의 <span style="font-weight: bold;">1955년 - 2022년</span> 수치는
+                실제 데이터입니다. </p>
+            <p style="font-size: 1.2rem;"><span style="font-weight: bold">2023년 - 2070년</span> 수치는 이전 데이터를 바탕으로 한 출력한
+                예측값입니다.</p>
         </div>
+    </div>
 
 
     <div style="width: 900px; height: 900px;">
@@ -91,12 +93,12 @@
 
         <script>
             var isAnimating = false;
-        
+
             function handleScroll() {
                 var pythonElement = document.querySelector('.python');
                 var textboxElement = document.querySelector('.python-textbox');
                 var position = pythonElement.getBoundingClientRect();
-        
+
                 if (position.top <= 60 && position.top >= 40 && !isAnimating) {
                     console.log("2")
                     isAnimating = true;
@@ -111,20 +113,20 @@
                     textboxElement.classList.remove('animate');
                 }
             }
-        
+
             window.addEventListener('scroll', handleScroll);
-        
-            document.querySelector('.python-textbox').addEventListener('animationend', function() {
+
+            document.querySelector('.python-textbox').addEventListener('animationend', function () {
                 isAnimating = false;
             });
         </script>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
 </body>
 
 </html>
