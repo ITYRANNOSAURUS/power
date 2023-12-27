@@ -14,24 +14,27 @@
 
 
 <body>
-  <header style="display: flex; align-items: center;">
-    <a href="/">
-      <img src="src/logo.svg" alt="Logo" style="
-            position: absolute;
-            top: 0rem;
-            left: 3rem;
-            width: 18rem;
-            height: 10rem;
-          " />
-    </a>
+  <header>
+    <div class="logo-container">
+      <a href="/">
+        <img src="src/logo.svg" alt="Logo" style="
+              width: 18rem;
+              height: 10rem;
+              margin-left: 3rem;
+            " />
+      </a>
+    </div>
 
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="/powerprice">전기 단가 계산기</a></li>
-        <li class="nav-item"><a href="/poweruse">전력 소비량 계산기</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/powerprice">전기 단가 계산기</a></li>
+          <li class="nav-item"><a href="/poweruse">전력 소비량 계산기</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
 
   <h1 class="price-title">
     📈미래 <span style="color: #ce295b">전기 단가</span> 계산기
