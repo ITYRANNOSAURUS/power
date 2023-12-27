@@ -7,8 +7,8 @@ const priceChartData = {
     {
       label: "전력 단가 (kWh/원)",
       data: Object.values(powerPriceData),
-      backgroundColor: Object.keys(powerPriceData).map(() => "#00000012"), // 기본 색상으로 배열 채우기
-      borderColor: "#ce295b9f", // 막대 테두리 색상 설정
+      backgroundColor: Object.keys(powerPriceData).map(() => "rgba(0, 0, 0, 0.07)"), // 기본 색상으로 배열 채우기
+      borderColor: "rgba(206, 41, 91, 0.624)", // 막대 테두리 색상 설정
       borderWidth: 1,
     },
   ],
@@ -37,6 +37,7 @@ const config = {
         display: true,
         text: "전력 가격 그래프",
       },
+
     },
   },
 };
