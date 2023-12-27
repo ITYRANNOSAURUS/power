@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전기가격 및 전력 소비량 계산기</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script type="module" src="js/powerprice.js"></script>
-    <script type="module" src="js/poweruse.js"></script>
+    <!-- <script type="module" src="js/powerprice.js"></script>
+    <script type="module" src="js/poweruse.js"></script> -->
     <link rel="stylesheet" href="css/power.css">
 
 
@@ -38,10 +38,13 @@
         </div>
         <div class="hover">
             <div class="hover1">
-                <h1 onclick="window.location.href='/powerprice'">📈전기 단가 계산기 바로가기 ▶️</h1>
+                <h1 onclick="window.location.href='/powerprice'">⚡전기 단가 계산기 바로가기 ▶️</h1>
             </div>
             <div class="hover2">
-                <h1 onclick="window.location.href='/poweruse'"> 📈전력 소비량 계산기 바로가기▶️</h1>
+                <h1 onclick="window.location.href='/poweruse'"> 📈전력 소비량 계산기 바로가기 ▶️</h1>
+            </div>
+            <div class="hover3">
+                <h1 onclick="window.location.href='/powerhome'"> 🏡우리 집 전기세 계산기 바로가기 ▶️</h1>
             </div>
         </div>
     </div>
@@ -78,7 +81,7 @@
 
         </div>
 
-        <script src="/pChart.js"></script>
+        <!-- <script src="/pChart.js"></script> -->
 
         <h1>미래 1인당 전력 소비량 계산기</h1>
 
@@ -91,7 +94,7 @@
         <div style="width: 900px; height: 900px;">
             <canvas id="useChart"></canvas>
         </div>
-        <script src="/uChart.js"></script>
+        <!-- <script src="/uChart.js"></script> -->
 
         <script>
             var isAnimating = false;

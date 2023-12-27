@@ -49,6 +49,11 @@ body {
   /* hover 시 글자 색상 변경 */
 }
 
+.hover3 h3:hover {
+  color: #efb806;
+  /* hover 시 글자 색상 변경 */
+}
+
 .videoContainer {
   position: relative;
   height: 100vh;

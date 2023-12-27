@@ -1,20 +1,24 @@
-const express = require('express');
-const app = express();
-const path = require('path');
+import express from 'express';
+import path from 'path';
 
-app.use(express.static(path.join(__dirname, 'public')));
+const app = express();
+
+app.use(express.static(path.join(process.cwd(), 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'power.html'));
+    res.sendFile(path.join(process.cwd(), 'public', 'power.html'));
 });
 
 app.get('/powerprice', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'powerprice.html'));
+    res.sendFile(path.join(process.cwd(), 'public', 'powerprice.html'));
 });
 
 app.get('/poweruse', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'poweruse.html'));
+    res.sendFile(path.join(process.cwd(), 'public', 'poweruse.html'));
 });
+
+// app.set('view engine', 'ejs');
+// app.set('views', path.join(process.cwd(), 'views'));
 
 app.listen(3000, () => {
     console.log('서버가 3000번 포트에서 시작되었습니다.');

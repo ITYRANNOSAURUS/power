@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전력가격 및 전력 소비량 계산기</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- <script src="Chart.js"></script> -->
+    <!-- <script type="module" src="js/powerprice.js"></script>
+  <script type="module" src="js/poweruse.js"></script> -->
+    <link rel="stylesheet" href="css/powerprice.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="/">
+                <img src="src/logo.svg" alt="Logo" style="
+              width: 18rem;
+              height: 10rem;
+              margin-left: 3rem;
+            " />
+            </a>
+        </div>
+
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/powerprice">전기 단가 계산기</a></li>
+                    <li class="nav-item"><a href="/poweruse">전력 소비량 계산기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div>
+        <h1>데이터:</h1>
+        <pre><%= JSON.stringify(data, null, 2) %></pre> <!-- 데이터를 JSON 형식으로 표시 -->
+    </div>
+
+</body>
+
+</html>
