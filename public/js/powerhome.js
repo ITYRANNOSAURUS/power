@@ -1,24 +1,23 @@
 const express = require("express");
 const https = require("https");
 const dotenv = require("dotenv");
+const bodyParser = require("body-parser"); // body-parser 모듈을 추가합니다.
 
 dotenv.config();
 
-const app = express(); // 이 코드를 먼저 실행합니다.
-
-
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true })); // express 앱이 body-parser를 사용하도록 설정합니다.
 
 app.get("/powerhome", function (req, res) {
-
     const apiKey = process.env.API_KEY;
-    const year = '2020';
-    const month = '11';
-    const metroCd = '11';
-    const cityCd = '11';
-    const bizCd = 'C';
+    const year = req.query.year; // 사용자가 선택한 '연도' 값을 받습니다.
+    const month = req.query.month; // 사용자가 선택한 '월' 값을 받습니다.
+    const metroCd = req.query.metroCd; // 사용자가 선택한 '시도 코드' 값을 받습니다.
+    const cityCd = req.query.cityCd; // 사용자가 선택한 '시군구 코드' 값을 받습니다.
+    const cntrCd = req.query.cntrCd; // 사용자가 선택한 '업종 코드' 값을 받습니다.
     const returnType = 'json';
 
-    const apiUrl = `https://bigdata.kepco.co.kr/openapi/v1/powerUsage/industryType.do?year=${year}&month=${month}&metroCd=${metroCd}&cityCd=${cityCd}&bizCd=${bizCd}&apiKey=${apiKey}&returnType=${returnType}`;
+    const apiUrl = `https://bigdata.kepco.co.kr/openapi/v1/powerUsage/industryType.do?year=${year}&month=${month}&metroCd=${metroCd}&cityCd=${cityCd}&cntrCd=${cntrCd}&apiKey=${apiKey}&returnType=${returnType}`;
 
     https.get(apiUrl, function (apiRes) {
         let data = '';
@@ -28,7 +27,7 @@ app.get("/powerhome", function (req, res) {
         });
 
         apiRes.on('end', () => {
-            console.log(data); // 여기에서 데이터를 출력합니다.
+            console.log(data);
             res.send(data);
         });
 

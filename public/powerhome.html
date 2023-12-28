@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/powerprice.css">
 </head>
 
-
 <body>
     <header>
         <div class="logo-container">
@@ -35,7 +34,38 @@
         </div>
     </header>
 
+    <form action="http://localhost:3000/powerhome" method="get">
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+        </select>
 
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+            <option value="01">January</option>
+            <option value="02">February</option>
+        </select>
+
+        <label for="metroCd">Metro Code:</label>
+        <select id="metroCd" name="metroCd">
+            <option value="11">서울특별시</option>
+        </select>
+
+        <label for="cityCd">City Code:</label>
+        <select id="cityCd" name="cityCd">
+            <option value="26">강남구</option>
+        </select>
+
+        <label for="cntrCd">Industry Code:</label>
+        <select id="cntrCd" name="cntrCd">
+            <option value="100">주택용</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="/js/powerhome.js"></script>
 
 </body>
 
