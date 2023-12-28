@@ -4,9 +4,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const app = express(); // 이 코드를 먼저 실행합니다.
-
-
+const app = express();
 
 app.get("/powerhome", function (req, res) {
 
@@ -28,7 +26,6 @@ app.get("/powerhome", function (req, res) {
         });
 
         apiRes.on('end', () => {
-            console.log(data); // 여기에서 데이터를 출력합니다.
             res.send(data);
         });
 
@@ -40,3 +37,13 @@ app.get("/powerhome", function (req, res) {
 app.listen(3000, function () {
     console.log("Server is running at port 3000...");
 });
+
+
+
+
+
+
+
+
+
+

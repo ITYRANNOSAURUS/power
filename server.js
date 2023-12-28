@@ -1,5 +1,5 @@
-import express from 'express';
-import path from 'path';
+const express = require('express');
+const path = require('path');
 
 const app = express();
 
@@ -17,8 +17,9 @@ app.get('/poweruse', (req, res) => {
     res.sendFile(path.join(process.cwd(), 'public', 'poweruse.html'));
 });
 
-// app.set('view engine', 'ejs');
-// app.set('views', path.join(process.cwd(), 'views'));
+app.get('/powerhome', (req, res) => {
+    res.sendFile(path.join(process.cwd(), 'public', 'powerhome.html'));
+});
 
 app.listen(3000, () => {
     console.log('서버가 3000번 포트에서 시작되었습니다.');
