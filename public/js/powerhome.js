@@ -1,3 +1,5 @@
+// http://localhost:3000/powerhome?year=2020&month=01&metroCd=11&cityCd=26&bizCd=C
+
 const express = require("express");
 const https = require("https");
 const dotenv = require("dotenv");
@@ -35,6 +37,7 @@ app.get("/powerhome", function (req, res) {
         console.log("Error: " + err.message);
     });
 });
+
 
 app.listen(3000, function () {
     console.log("Server is running at port 3000...");

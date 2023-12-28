@@ -34,7 +34,7 @@
         </div>
     </header>
 
-    <form action="http://localhost:3000/powerhome" method="get">
+    <form id="powerhomeForm" action="http://localhost:3000/powerhome" method="get">
         <label for="year">Year:</label>
         <select id="year" name="year">
             <option value="2020">2020</option>
@@ -65,8 +65,8 @@
         <input type="submit" value="Submit">
     </form>
 
-    <script src="/js/powerhome.js"></script>
-
+    <div id="dataContainer"></div>
+    <script src="/js/client.js"></script>
 </body>
 
 </html>
