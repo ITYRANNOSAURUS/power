@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // express 앱이 body-parse
 
 app.get("/powerhome", function (req, res) {
     const apiKey = process.env.API_KEY;
-    const year = req.query.year; // 사용자가 선택한 '연도' 값을 받습니다.
-    const month = req.query.month; // 사용자가 선택한 '월' 값을 받습니다.
-    const metroCd = req.query.metroCd; // 사용자가 선택한 '시도 코드' 값을 받습니다.
-    const cityCd = req.query.cityCd; // 사용자가 선택한 '시군구 코드' 값을 받습니다.
-    const cntrCd = req.query.cntrCd; // 사용자가 선택한 '업종 코드' 값을 받습니다.
+    const year = req.body.year; // 사용자가 선택한 '연도' 값을 받습니다.
+    const month = req.body.month; // 사용자가 선택한 '월' 값을 받습니다.
+    const metroCd = req.body.metroCd; // 사용자가 선택한 '시도 코드' 값을 받습니다.
+    const cityCd = req.body.cityCd; // 사용자가 선택한 '시군구 코드' 값을 받습니다.
+    const cntrCd = req.body.cntrCd; // 사용자가 선택한 '업종 코드' 값을 받습니다.
     const returnType = 'json';
 
     const apiUrl = `https://bigdata.kepco.co.kr/openapi/v1/powerUsage/industryType.do?year=${year}&month=${month}&metroCd=${metroCd}&cityCd=${cityCd}&cntrCd=${cntrCd}&apiKey=${apiKey}&returnType=${returnType}`;
