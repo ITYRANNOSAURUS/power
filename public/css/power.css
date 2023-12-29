@@ -152,9 +152,9 @@ body {
 
 .arrow {
   position: absolute;
-  top: 15rem;
+  top: 12rem;
   /* 원하는 위치에 맞게 조정하세요 */
-  left: 50%;
+  left: 55%;
   /* 원하는 위치에 맞게 조정하세요 */
   transform: translateX(-50%);
   /* 화살표를 가로 중앙에 위치시키기 위해 사용 */
