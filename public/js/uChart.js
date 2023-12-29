@@ -6,8 +6,8 @@ const useChartData = {
     datasets: [{
         label: '1인당 전력 사용량 (kWh/명)',
         data: Object.values(powerConsumptionData),
-        backgroundColor: Object.keys(powerConsumptionData).map(() => 'lightgrey'), // 기본 색상으로 배열 채우기
-        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: Object.keys(powerConsumptionData).map(() => "rgba(0, 0, 0, 0.07)"), // 기본 색상으로 배열 채우기
+        borderColor: 'rgba(36, 140, 214, 0.459)',
         borderWidth: 1
     }]
 };
