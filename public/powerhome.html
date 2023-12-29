@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>전력가격 및 전력 소비량 계산기</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <!-- <script src="Chart.js"></script> -->
-    <!-- <script type="module" src="js/powerprice.js"></script>
-  <script type="module" src="js/poweruse.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/powerprice.css">
 </head>
 
@@ -34,7 +32,7 @@
         </div>
     </header>
 
-    <form id="powerhomeForm" action="http://localhost:3000/powerhome" method="post">
+    <form id="powerhomeForm">
         <label for="year">Year:</label>
         <select id="year" name="year">
             <option value="2020">2020</option>
@@ -65,8 +63,18 @@
         <input type="submit" value="Submit">
     </form>
 
-    <div id="dataContainer"></div>
-    <script src="/js/client.js"></script>
+    <div id="powerData"></div>
+
+
+
+
+    <script>
+
+    </script>
+
+
+
+
 </body>
 
 </html>

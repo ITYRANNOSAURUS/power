@@ -9,21 +9,13 @@ document.querySelector('#powerhomeForm').addEventListener('submit', function (e)
 
     fetch(`/powerhome?year=${year}&month=${month}&metroCd=${metroCd}&cityCd=${cityCd}&cntrCd=${cntrCd}`)
         .then(response => {
-            // 응답 본문을 텍스트로 출력
-            response.text().then(text => {
-                console.log(text);
-            });
-
-            // JSON 형식일 경우 다음 단계로 이동
-            if (response.ok) {
-                return response.json();
-            } else {
+            if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
+            return response.json();
         })
         .then(data => {
             console.log(data);
         })
         .catch(err => console.error('Error: ', err));
-
 });

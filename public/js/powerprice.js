@@ -9,9 +9,8 @@ window.updateYearInput = function () {
 }
 
 window.onload = function () {
-  document
-    .getElementById("powerprice-yearInput")
-    .addEventListener("keydown", handleKeyPress);
+  document.getElementById("powerprice-yearInput")
+    .addEventListener("keydown", window.handleKeyPress);
 };
 
 window.handleKeyPress = function (event) {
