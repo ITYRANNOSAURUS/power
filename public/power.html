@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전기가격 및 전력 소비량 계산기</title>
+    <title>내일의 전기세</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- <script type="module" src="js/powerprice.js"></script>
     <script type="module" src="js/poweruse.js"></script> -->
@@ -17,7 +17,7 @@
 
 <body>
 
-    <div id="videoContainer">
+    <div class="videoContainer">
         <!-- 배경 동영상 추가 -->
         <video playsinline autoplay muted loop id="bgvid"
             style="position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; object-fit: cover;">
@@ -49,6 +49,46 @@
         </div>
     </div>
 
+
+
+    <div class="videoContainer2">
+        <!-- 배경 동영상 추가 -->
+        <video playsinline autoplay muted loop id="bgvid">
+            <source src="src/sky.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div class="pricerchart">
+
+        <div class="maincharttext">
+            <h1>전력 단가는 상승하는 추세를 보이고 있습니다.</h1>
+            <p>1955 ~ 2022</p>
+
+        </div>
+
+        <div class="arrow" id="upArrow">
+            <img src="src/up-arrow.png" alt="up-arrow">
+        </div>
+
+        <div style="
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  ">
+            <!--차트가 그려질 부분-->
+            <canvas id="PriceRealChart"></canvas>
+        </div>
+        <script type="module" src="/js/prChart.js"></script>
+
+        <p>자료 출처 : 전력통계정보시스템</p>
+
+    </div>
+
+
     <div class="python">
         <div class="python-textbox">
             <div class="python-main">
@@ -63,68 +103,57 @@
         </div>
     </div>
 
+    <h1>미래 1인당 전력 소비량 계산기</h1>
+
+    <div id="poweruse-container">
+        <input type="number" id="poweruse-yearInput" placeholder="연도를 입력하세요.">
+        <button onclick="getPowerConsumption()">확인</button>
+        <p id="poweruse-result"></p>
+    </div>
 
     <div style="width: 900px; height: 900px;">
-        <h1>미래 전기 단가 계산기</h1>
-
-        <div id="powerprice-container">
-            <input type="number" id="powerprice-yearInput" placeholder="연도를 입력하세요.">
-            <button onclick="getPowerPrice()">확인</button>
-            <p id="powerprice-result"></p>
+        <canvas id="useChart"></canvas>
+    </div>
 
 
-        </div>
 
-        <div style="width: 900px; height: 900px;">
-            <!--차트가 그려질 부분-->
-            <canvas id="priceChart"></canvas>
+    <script>
+        var isAnimating = false;
 
-        </div>
+        function handleScroll() {
+            var pythonElement = document.querySelector('.python');
+            var textboxElement = document.querySelector('.python-textbox');
+            var position = pythonElement.getBoundingClientRect();
 
-        <!-- <script src="/pChart.js"></script> -->
-
-        <h1>미래 1인당 전력 소비량 계산기</h1>
-
-        <div id="poweruse-container">
-            <input type="number" id="poweruse-yearInput" placeholder="연도를 입력하세요.">
-            <button onclick="getPowerConsumption()">확인</button>
-            <p id="poweruse-result"></p>
-        </div>
-
-        <div style="width: 900px; height: 900px;">
-            <canvas id="useChart"></canvas>
-        </div>
-        <!-- <script src="/uChart.js"></script> -->
-
-        <script>
-            var isAnimating = false;
-
-            function handleScroll() {
-                var pythonElement = document.querySelector('.python');
-                var textboxElement = document.querySelector('.python-textbox');
-                var position = pythonElement.getBoundingClientRect();
-
-                if (position.top <= 60 && position.top >= 40 && !isAnimating) {
-                    console.log("2")
-                    isAnimating = true;
-                    textboxElement.style.animation = 'none';
-                    setTimeout(function () {
-                        textboxElement.style.animation = '';
-                    }, 10);
-                    if (!textboxElement.classList.contains('animate')) {
-                        textboxElement.classList.add('animate');
-                    }
-                } else if (position.top < 40 || position.top > 60) {
-                    textboxElement.classList.remove('animate');
+            if (position.top <= 60 && position.top >= 40 && !isAnimating) {
+                console.log("2")
+                isAnimating = true;
+                textboxElement.style.animation = 'none';
+                setTimeout(function () {
+                    textboxElement.style.animation = '';
+                }, 10);
+                if (!textboxElement.classList.contains('animate')) {
+                    textboxElement.classList.add('animate');
                 }
+            } else if (position.top < 40 || position.top > 60) {
+                textboxElement.classList.remove('animate');
             }
+        }
 
-            window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
-            document.querySelector('.python-textbox').addEventListener('animationend', function () {
-                isAnimating = false;
-            });
-        </script>
+        document.querySelector('.python-textbox').addEventListener('animationend', function () {
+            isAnimating = false;
+        });
+
+
+        // JavaScript를 사용하여 특정 이벤트(예: 페이지 로드)에 따라 애니메이션 클래스를 트리거
+        document.addEventListener('DOMContentLoaded', function () {
+            const arrow = document.querySelector('.arrow');
+            arrow.classList.add('animate-arrow');
+        });
+
+    </script>
 
 
 

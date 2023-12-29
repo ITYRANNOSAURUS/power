@@ -30,6 +30,13 @@ window.toggleYearDropdown = function () {
 
 window.getPowerConsumption = function () {
     let year = document.getElementById("poweruse-yearInput").value;
+
+    // 빈 칸 체크
+    if (year.trim() === "") {
+        document.getElementById("poweruse-result").innerText = "연도를 입력해 주세요.";
+        return;
+    }
+
     let consumption = powerConsumptionData[year];
 
     if (consumption === undefined) {

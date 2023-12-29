@@ -30,6 +30,14 @@ window.toggleYearDropdown = function () {
 
 window.getPowerPrice = function () {
   let year = document.getElementById("powerprice-yearInput").value;
+
+  // 빈 칸 체크
+  if (year.trim() === "") {
+    document.getElementById("powerprice-result").innerText = "연도를 입력해 주세요.";
+    return;
+  }
+
+
   let price = powerPriceData[year];
 
   if (price === undefined) {

@@ -1,5 +1,12 @@
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "GongGothicLight", sans-serif;
+  margin-bottom: 20rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .main {
@@ -7,10 +14,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh;
+  height: 95vh;
+  width: 100vw;
   text-align: center;
   flex-direction: column;
   z-index: 1;
+  margin-top: 5rem;
 }
 
 .main-title {
@@ -54,12 +63,23 @@ body {
   /* hover 시 글자 색상 변경 */
 }
 
-.videoContainer {
-  position: relative;
+
+
+.videoContainer2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  top: 100%;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
   z-index: -1;
+  opacity: 0.8;
 }
+
 
 #bgvid {
   opacity: 0.5;
@@ -76,7 +96,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 120vh;
+  height: 150vh;
   text-align: center;
 }
 
@@ -104,6 +124,57 @@ body {
   /* 애니메이션 지속 시간 설정 */
   animation-fill-mode: forwards;
   /* 애니메이션 종료 후 마지막 속성값 유지 */
+}
+
+
+
+
+.pricerchart {
+  position: relative;
+  height: 150vh;
+  width: 120vh;
+  z-index: 2;
+}
+
+
+.maincharttext {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+#PriceRealChart {
+  background-color: white;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 15rem;
+  /* 원하는 위치에 맞게 조정하세요 */
+  left: 50%;
+  /* 원하는 위치에 맞게 조정하세요 */
+  transform: translateX(-50%);
+  /* 화살표를 가로 중앙에 위치시키기 위해 사용 */
+  animation: fadeEffect 3s infinite;
+  /* 애니메이션 속성 설정 (이 예제에서는 3초 동안 반복) */
+  opacity: 0;
+  /* 초기에는 투명도를 0으로 설정하여 숨김 */
+}
+
+
+@keyframes fadeEffect {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes main_title_animation {

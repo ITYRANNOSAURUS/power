@@ -44,9 +44,9 @@ const useChart = new Chart(useCtx, useConfig);
 
 window.updateUseChart = function (year) {
     let color;
-    if (year < 2025) {
+    if (year < 2022) {
         color = 'red';
-    } else if (year < 2030) {
+    } else if (year < 2040) {
         color = 'blue';
     } else {
         color = 'green';

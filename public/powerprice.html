@@ -48,7 +48,7 @@
   </p>
   <div id="powerprice-container">
     <div id="input-container">
-      <input type="text" id="powerprice-yearInput" placeholder="1955년~2070년 사이의 연도만 입력하실 수 있습니다." />
+      <input type="number" id="powerprice-yearInput" min="0" placeholder="1955년~2070년 사이의 연도만 입력하실 수 있습니다." />
       <select class="year-dropdown" id="year-dropdown" onchange="updateYearInput()">
         <script>
           for (let i = 1955; i <= 2070; i++) {
