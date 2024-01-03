@@ -7,7 +7,7 @@
   <title>내일의 전기세</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <!-- <script src="Chart.js"></script> -->
-  <script type="module" src="js/powernew.js"></script>
+  <script type="module" src="js/powersum.js"></script>
   <link rel="stylesheet" href="css/powernew.css">
 </head>
 
@@ -35,30 +35,32 @@
   </header>
 
   <h1 class="rn-title">
-    💡미래 <span style="color: #efb806">에너지 수입의존도</span> 계산기
+    💡미래 <span style="color: #efb806">신재생에너지</span> 계산기
   </h1>
   <p class="rn-main">원하시는 연도를 입력하세요.</p>
   <p class="rn-intro">
-    1955년-2022년의 단가는 실제 데이터이고, 2023년-2070년의 단가는 예측
+    2005년-2021년의 단가는 실제 데이터이고, 2022년-2070년의 단가는 예측
     데이터입니다.
   </p>
   <p class="rn-desc">
-    1인당 전력 소비량은 한국 전체 사용 전력을 인구 수로 나눈 자료입니다. (주택용, 산업용 등 모두 포함)
+    신재생에너지 공급비중은 전체 공급 에너지 중 신재생에너지 공급 비중을 나타냅니다.
   </p>
-  <div id="powerrn-container">
+  <div id="powersum-container">
     <div id="input-container">
-      <input type="number" id="powerrn-yearInput" min="0" placeholder="1955년~2070년 사이의 연도만 입력하실 수 있습니다." />
+      <input type="number" id="powersum-yearInput" min="0" placeholder="2005년~2070년 사이의 연도만 입력하실 수 있습니다." />
       <select class="year-dropdown" id="year-dropdown" onchange="updateYearInput()">
         <script>
-          for (let i = 1955; i <= 2070; i++) {
+          for (let i = 2005; i <= 2070; i++) {
             document.write('<option value="' + i + '">' + i + '</option>');
           }
         </script>
       </select>
-      <button onclick="getPowerConsumption()">확인</button>
+      <button onclick="getPowerSum()">확인</button>
     </div>
-    <p id="powerrn-result"></p> <!-- 여기에 결과를 표시합니다. -->
+    <p id="powersum-result"></p>
   </div>
+
+
 </body>
 
 

@@ -1,8 +1,5 @@
 const path = require('path');
 const express = require('express');
-const axios = require('axios');
-const bodyParser = require('body-parser');
-const cors = require('cors');
 
 require('dotenv').config();
 
@@ -11,9 +8,6 @@ app.use(express.json());
 
 app.use(express.static(path.join(process.cwd(), 'public')));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(cors());
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(process.cwd(), 'public', 'power.html'));

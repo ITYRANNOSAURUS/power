@@ -1,7 +1,7 @@
-import { powerNewRData } from './powerNewRData.js';
+import { powerSumData } from './powerNewRData.js';
 
 window.updateYearInput = function () {
-    var yearInput = document.getElementById("powerrn-yearInput");
+    var yearInput = document.getElementById("powersum-yearInput");
     var yearDropdown = document.getElementById("year-dropdown");
 
     // 선택한 연도를 입력 창에 설정
@@ -9,14 +9,14 @@ window.updateYearInput = function () {
 }
 
 window.onload = function () {
-    document.getElementById("powerrn-yearInput")
+    document.getElementById("powersum-yearInput")
         .addEventListener("keydown", window.handleKeyPress);
 };
 
 window.handleKeyPress = function (event) {
     // 엔터 키를 눌렀을 때
     if (event.key === "Enter") {
-        getPowerConsumption();
+        getPowerSum();
     }
 }
 
@@ -28,32 +28,32 @@ window.toggleYearDropdown = function () {
         yearDropdown.style.display === "none" ? "block" : "none";
 }
 
-window.getPowerConsumption = function () {
-    let year = document.getElementById("powerrn-yearInput").value;
+window.getPowerSum = function () {
+    let year = document.getElementById("powersum-yearInput").value;
 
     // 빈 칸 체크
     if (year.trim() === "") {
-        document.getElementById("powerrn-result").innerText = "연도를 입력해 주세요.";
+        document.getElementById("powersum-result").innerText = "연도를 입력해 주세요.";
         return;
     }
 
-    let consumption = powerNewRData[year];
+    let consumption = powerSumData[year];
 
     if (consumption === undefined) {
-        document.getElementById("powerrn-result").innerText =
+        document.getElementById("powersum-result").innerText =
             year + "년의 데이터는 아직 준비되지 않았습니다.";
     } else {
-        let baseYear = 2022;
-        let baseConsumption = powerNewRData[baseYear];
+        let baseYear = 2021;
+        let baseConsumption = powerSumData[baseYear];
         let increaseRate = (((consumption - baseConsumption) / baseConsumption) * 100).toFixed(2);
 
-        if (year >= 1955 && year <= 2022) {
+        if (year >= 2005 && year <= 2022) {
             let consumptionComparison =
-                increaseRate > 0 ? "많은 소비량입니다." : "적은 소비량입니다.";
+                increaseRate > 0 ? "많은 공급 비중입니다." : "적은 공급 비중입니다.";
 
-            document.getElementById("powerrn-result").innerText =
+            document.getElementById("powersum-result").innerText =
                 year +
-                "년의 에너지 수입의존도는 " +
+                "년의 신재생에너지 공급 비중은 " +
                 consumption +
                 " (%)으로, " +
                 baseYear +
@@ -62,15 +62,15 @@ window.getPowerConsumption = function () {
                 "% " +
                 consumptionComparison;
         } else {
-            document.getElementById("powerrn-result").innerText =
+            document.getElementById("powersum-result").innerText =
                 year +
-                "년의 에너지 수입의존도는 " +
+                "년의 신재생에너지 공급 비중은 " +
                 consumption +
                 " (%)으로, " +
                 baseYear +
                 "년 대비 " +
                 increaseRate +
-                "% 하락합니다.";
+                "% 상승합니다.";
         }
         updateRnChart(year);
     }
