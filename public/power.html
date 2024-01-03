@@ -92,6 +92,30 @@
     </div>
 
 
+
+    <div class="image1"></div>
+
+    <div class="how-text">
+        <h1><span style="color: #ce2929;">전기 단가 상승</span> 문제를 </h1>
+        <h1>해결할 수 있는 방법은</h1>
+        <h1>무엇일까요?</h1>
+    </div>
+
+    <div class="image2"></div>
+
+
+    <div class="main-how">
+        <div class="how-textbox">
+            <div class="how-main">
+                <h1><span style="color: #ce2929;">전기 단가 상승</span> 문제를 </h1>
+                <h1>해결할 수 있는 방법은</h1>
+                <h1>무엇일까요?</h1>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="python">
         <div class="python-textbox">
             <div class="python-main">
@@ -121,6 +145,37 @@
 
 
     <script>
+
+        //how 효과
+        var isAnimating = false;
+
+        function handleScroll2() {
+            var howElement = document.querySelector('.main-how');
+            var textboxElement = document.querySelector('.how-textbox');
+            var position = howElement.getBoundingClientRect();
+
+            if (position.top <= 100 && position.top >= 80 && !isAnimating) {
+                console.log("2")
+                isAnimating = true;
+                textboxElement.style.animation = 'none';
+                setTimeout(function () {
+                    textboxElement.style.animation = '';
+                }, 10);
+                if (!textboxElement.classList.contains('animate')) {
+                    textboxElement.classList.add('animate');
+                }
+            } else if (position.top < 40 || position.top > 60) {
+                textboxElement.classList.remove('animate');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll2);
+
+        document.querySelector('.how-textbox').addEventListener('animationend', function () {
+            isAnimating = false;
+        });
+
+        //python 효과
         var isAnimating = false;
 
         function handleScroll() {
