@@ -19,17 +19,22 @@ body {
   text-align: center;
   flex-direction: column;
   z-index: 1;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .main-title {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   animation: main_title_animation 1s ease;
 }
+
 
 .title-highlight1 {
   color: #ce2929;
   /* 원하는 색상 코드로 변경하세요 */
+}
+
+.hover {
+  margin-top: 5rem;
 }
 
 .hover h1 {
@@ -57,6 +62,12 @@ body {
   color: #2950ce;
   /* hover 시 글자 색상 변경 */
 }
+
+.hover4 h1:hover {
+  color: #2cac02;
+  /* hover 시 글자 색상 변경 */
+}
+
 
 
 
@@ -91,7 +102,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 150vh;
+  height: 100vh;
   text-align: center;
 }
 
@@ -126,7 +137,7 @@ body {
 
 .pricerchart {
   position: relative;
-  height: 150vh;
+  height: 100vh;
   width: 120vh;
   z-index: 2;
 }

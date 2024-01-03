@@ -6,20 +6,20 @@ const chartData = {
     datasets: [
         {
             data: Object.values(powerNewRData),
-            label: "에너지",
-            borderColor: "#3e95cd",
+            label: "신에너지",
+            borderColor: "#98d5ec",
             fill: false
         },
         {
             data: Object.values(powerReRData),
             label: "재생에너지",
-            borderColor: "#8e5ea2",
+            borderColor: "#db98ec",
             fill: false
         },
         {
             data: Object.values(powerSumData),
             label: "신재생에너지",
-            borderColor: "#8e5ea2",
+            borderColor: "#6fc400",
             fill: false
         }
     ]
@@ -32,7 +32,7 @@ const rnChart = new Chart(rnCtx, {
     options: {
         title: {
             display: true,
-            text: '신재생에너지 공급'
+            text: '신재생에너지 공급 비중(%)'
         }
     }
 });

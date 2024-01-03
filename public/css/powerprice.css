@@ -26,20 +26,20 @@ header {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-right: 23rem;
-  width: 30rem
+  margin-right: 13rem;
+  width: 50rem
     /* 이부분을 조정하여 각 항목 사이의 간격을 조절할 수 있습니다. */
 }
 
-.nav-item a {
+.nav-item1 a {
   text-decoration: none;
-  color: black;
+  color: #000000;
   font-size: 1.2rem;
   transition: color 0.3s ease;
   position: relative;
 }
 
-.nav-item a::after {
+.nav-item1 a::after {
   content: "";
   position: absolute;
   bottom: -0.5rem;
@@ -53,14 +53,103 @@ header {
 }
 
 
-.nav-item a:hover {
+.nav-item1 a:hover {
   color: #ce295b;
 }
 
-.nav-item a:hover::after {
+.nav-item1 a:hover::after {
   transform: scaleX(1);
 }
 
+.nav-item2 a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-item2 a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.2rem;
+  background-color: #efb806;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+
+.nav-item2 a:hover {
+  color: #efb806;
+}
+
+.nav-item2 a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-item3 a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-item3 a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.2rem;
+  background-color: #2950ce;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+
+.nav-item3 a:hover {
+  color: #2950ce;
+}
+
+.nav-item3 a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-item4 a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-item4 a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.2rem;
+  background-color: #6dbf03;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+
+.nav-item4 a:hover {
+  color: #6dbf03;
+}
+
+.nav-item4 a:hover::after {
+  transform: scaleX(1);
+}
 
 
 .price-title {
