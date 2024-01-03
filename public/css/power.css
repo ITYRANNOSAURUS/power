@@ -28,12 +28,7 @@ body {
 }
 
 .title-highlight1 {
-  color: #ce295b;
-  /* 원하는 색상 코드로 변경하세요 */
-}
-
-.title-highlight2 {
-  color: #2950ce;
+  color: #ce2929;
   /* 원하는 색상 코드로 변경하세요 */
 }
 
@@ -54,12 +49,12 @@ body {
 }
 
 .hover2 h1:hover {
-  color: #2950ce;
+  color: #efb806;
   /* hover 시 글자 색상 변경 */
 }
 
-.hover3 h3:hover {
-  color: #efb806;
+.hover3 h1:hover {
+  color: #2950ce;
   /* hover 시 글자 색상 변경 */
 }
 

@@ -63,22 +63,22 @@ header {
 
 
 
-.use-title {
+.rn-title {
     margin-top: 3rem;
     margin-bottom: 4rem;
     font-size: 2.5rem;
 }
 
-.use-main {
+.rn-main {
     font-size: 1.5rem;
     margin-bottom: 3rem;
 }
 
-.use-intro {
+.rn-intro {
     margin-bottom: 1rem;
 }
 
-.use-text {
+.rn-text {
     margin-bottom: 4rem;
     font-size: 1.2rem;
 }
@@ -124,13 +124,13 @@ header {
     /* 클릭했을 때 테두리 색을 변경 */
 }
 
-#poweruse-result {
+#powerrn-result {
     min-height: 3rem;
 }
 
 /* 결과값이 나와도 차트가 움직이지 않도록 */
 
-#poweruse-container {
+#powerrn-container {
     display: flex;
     flex-direction: column;
     /* 추가: 아이템들을 수직으로 배열 */
@@ -149,7 +149,7 @@ header {
     /* 추가: 부모 요소의 전체 너비를 차지하도록 설정 */
 }
 
-#poweruse-yearInput {
+#powerrn-yearInput {
     height: 2.5rem;
     width: 25rem;
     border-top: none;
@@ -165,18 +165,18 @@ header {
     /* 클릭 시 테두리 색상과 그림자 부드럽게 변경 */
 }
 
-#poweruse-yearInput::placeholder {
+#powerrn-yearInput::placeholder {
     font-family: "GongGothicLight", sans-serif;
     font-size: 1rem;
     color: rgba(0, 0, 0, 0.329);
 }
 
-#poweruse-yearInput:focus::placeholder {
+#powerrn-yearInput:focus::placeholder {
     color: white;
     /* padding-left: 2rem; */
 }
 
-#poweruse-yearInput:focus {
+#powerrn-yearInput:focus {
     outline: none;
     /* 기본 테두리 제거 */
     border-color: #f7ce02;
