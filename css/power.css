@@ -135,7 +135,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("src/light.jpg");
+  background-image: url("../src/light.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
@@ -148,7 +148,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("src/ship.jpg");
+  background-image: url("../src/ship.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
@@ -161,7 +161,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("src/wind-power.jpg");
+  background-image: url("../src/wind-power.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
@@ -174,7 +174,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("src/earth.jpg");
+  background-image: url("../src/earth.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
