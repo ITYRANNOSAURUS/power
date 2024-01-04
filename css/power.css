@@ -1,5 +1,4 @@
 @keyframes fadeEffect {
-
   0%,
   100% {
     opacity: 0;
@@ -16,7 +15,7 @@
   }
 
   to {
-    left: 30%;
+    left: 35%;
   }
 }
 
@@ -34,11 +33,11 @@
 
 @font-face {
   font-family: "GongGothicLight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
 
 body {
   display: flex;
@@ -110,7 +109,6 @@ body {
   color: #2cac02;
   /* hover 시 글자 색상 변경 */
 }
-
 
 #bgvid {
   opacity: 0.5;
@@ -238,7 +236,6 @@ body {
   color: #438e07;
 }
 
-
 .how-textbox4 {
   background-color: rgba(0, 0, 0, 0.073);
   /* 투명한 초록색 */
@@ -347,7 +344,7 @@ body {
   /* 초기에는 투명도를 0으로 설정하여 숨김 */
 }
 
-@media screen and (max-width : 780px) {
+@media screen and (max-width: 780px) {
   .arrow {
     display: none;
   }
