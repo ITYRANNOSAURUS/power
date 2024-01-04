@@ -16,7 +16,7 @@ window.onload = function () {
 window.handleKeyPress = function (event) {
     // 엔터 키를 눌렀을 때
     if (event.key === "Enter") {
-        getPowerConsumption();
+        getPowerDep();
     }
 }
 
@@ -28,7 +28,7 @@ window.toggleYearDropdown = function () {
         yearDropdown.style.display === "none" ? "block" : "none";
 }
 
-window.getPowerConsumption = function () {
+window.getPowerDep = function () {
     let year = document.getElementById("powerdep-yearInput").value;
 
     // 빈 칸 체크
