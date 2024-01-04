@@ -119,7 +119,7 @@ body {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  top: 100%;
+  top: 100vh;
   /* height: 100%;
   width: 100%;
   overflow: hidden;
