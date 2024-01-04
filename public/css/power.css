@@ -190,8 +190,6 @@ body {
   /* 텍스트와 상자의 간격 */
   width: 100%;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
 }
 
@@ -214,8 +212,6 @@ body {
   /* 텍스트와 상자의 간격 */
   width: 100%;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
@@ -240,8 +236,6 @@ body {
   /* 텍스트와 상자의 간격 */
   width: 100%;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
@@ -267,8 +261,6 @@ body {
   /* 텍스트와 상자의 간격 */
   width: 100%;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
