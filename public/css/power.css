@@ -112,21 +112,6 @@ body {
 }
 
 
-.videoContainer2 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  top: 100%;
-  /* height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: -1; */
-  opacity: 0.8;
-}
-
 #bgvid {
   opacity: 0.5;
 }
