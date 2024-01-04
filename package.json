@@ -1,4 +1,8 @@
 {
+  "homepage": "https://ityrannosaurus.github.io/power/",
+  "scripts": {
+    "deploy": "gh-pages -d public"
+  },
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2"

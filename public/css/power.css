@@ -78,7 +78,9 @@ body {
   margin-top: 5rem;
 }
 
-.hover h1 {
+.hover h1 a {
+  text-decoration: none;
+  color: black;
   margin-top: 1rem;
   /* 상단 간격 조절 */
   cursor: pointer;
@@ -89,22 +91,22 @@ body {
   margin-bottom: 2rem;
 }
 
-.hover1 h1:hover {
+.hover1 h1 a:hover {
   color: #ce295b;
   /* hover 시 글자 색상 변경 */
 }
 
-.hover2 h1:hover {
+.hover2 h1 a:hover {
   color: #efb806;
   /* hover 시 글자 색상 변경 */
 }
 
-.hover3 h1:hover {
+.hover3 h1 a:hover {
   color: #2950ce;
   /* hover 시 글자 색상 변경 */
 }
 
-.hover4 h1:hover {
+.hover4 h1 a:hover {
   color: #2cac02;
   /* hover 시 글자 색상 변경 */
 }
@@ -194,10 +196,11 @@ body {
 }
 
 .how-textbox .price-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
-  padding-top: 2rem;
 }
 
 .how-textbox .price-goto-link:hover {
@@ -218,6 +221,8 @@ body {
 }
 
 .how-textbox2 .dep-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
@@ -242,6 +247,8 @@ body {
 }
 
 .how-textbox3 .new-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
@@ -254,7 +261,7 @@ body {
 
 
 .how-textbox4 {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 0, 0, 0.11);
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
@@ -267,6 +274,8 @@ body {
 }
 
 .how-textbox4 .price-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
