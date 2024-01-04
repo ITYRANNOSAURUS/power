@@ -49,7 +49,7 @@ window.getPowerDep = function () {
 
         if (year >= 1995 && year <= 2022) {
             let consumptionComparison =
-                increaseRate > 0 ? "많은 소비량입니다." : "적은 소비량입니다.";
+                increaseRate > 0 ? "높습니다." : "낮습니다.";
 
             document.getElementById("powerdep-result").innerText =
                 year +
