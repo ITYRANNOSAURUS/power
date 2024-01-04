@@ -47,7 +47,7 @@ window.getPowerDep = function () {
         let baseConsumption = powerDepData[baseYear];
         let increaseRate = (((consumption - baseConsumption) / baseConsumption) * 100).toFixed(2);
 
-        if (year >= 1955 && year <= 2022) {
+        if (year >= 1995 && year <= 2022) {
             let consumptionComparison =
                 increaseRate > 0 ? "많은 소비량입니다." : "적은 소비량입니다.";
 
