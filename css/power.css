@@ -1,0 +1,377 @@
+@keyframes fadeEffect {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes main_title_animation {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 30%;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "GongGothicLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "GongGothicLight", sans-serif;
+  margin-bottom: 20rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 100vw;
+  text-align: center;
+  flex-direction: column;
+  z-index: 1;
+  margin-top: 3rem;
+}
+
+.main-title {
+  margin-bottom: 5rem;
+  animation: main_title_animation 1s ease;
+}
+
+.title-highlight1 {
+  color: #ce2929;
+  /* 원하는 색상 코드로 변경하세요 */
+}
+
+.hover {
+  margin-top: 5rem;
+}
+
+.hover h1 a {
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  /* 상단 간격 조절 */
+  cursor: pointer;
+  /* 커서를 포인터로 변경하여 클릭 가능한 것으로 나타냄 */
+  transition: color 0.3s;
+  /* hover 효과를 위한 전이 효과 설정 */
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hover1 h1 a:hover {
+  color: #ce295b;
+  /* hover 시 글자 색상 변경 */
+}
+
+.hover2 h1 a:hover {
+  color: #efb806;
+  /* hover 시 글자 색상 변경 */
+}
+
+.hover3 h1 a:hover {
+  color: #2950ce;
+  /* hover 시 글자 색상 변경 */
+}
+
+.hover4 h1 a:hover {
+  color: #2cac02;
+  /* hover 시 글자 색상 변경 */
+}
+
+
+.videoContainer2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+#bgvid {
+  opacity: 0.5;
+}
+
+.image1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("/src/light.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  /* 원본 이미지 크기의 50%로 설정 */
+  width: 100%;
+  /* div의 너비를 설정합니다 */
+}
+
+.image2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("/src/ship.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  /* 원본 이미지 크기의 50%로 설정 */
+  width: 100%;
+  /* div의 너비를 설정합니다 */
+}
+
+.image3 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("/src/wind-power.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  /* 원본 이미지 크기의 50%로 설정 */
+  width: 100%;
+  /* div의 너비를 설정합니다 */
+}
+
+.image4 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("/src/earth.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  /* 원본 이미지 크기의 50%로 설정 */
+  width: 100%;
+  /* div의 너비를 설정합니다 */
+}
+
+.how-textbox {
+  background-color: rgba(239, 6, 64, 0.2);
+  /* 투명한 초록색 */
+  padding: 4rem;
+  /* 텍스트와 상자의 간격 */
+  width: 100%;
+  /* 상자 너비 */
+  max-width: 100rem;
+  /* 상자 최대 너비 */
+  text-align: center;
+}
+
+.how-textbox .price-goto-link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.how-textbox .price-goto-link:hover {
+  color: #ce295b;
+}
+
+.how-textbox2 {
+  background-color: rgba(117, 199, 249, 0.358);
+  /* 투명한 초록색 */
+  padding: 4rem;
+  /* 텍스트와 상자의 간격 */
+  width: 100%;
+  /* 상자 너비 */
+  max-width: 100rem;
+  /* 상자 최대 너비 */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.how-textbox2 .dep-goto-link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+.how-textbox2 .dep-goto-link:hover {
+  color: #2950ce;
+}
+
+.how-textbox3 {
+  background-color: rgba(139, 190, 94, 0.683);
+  /* 투명한 초록색 */
+  padding: 4rem;
+  /* 텍스트와 상자의 간격 */
+  width: 100%;
+  /* 상자 너비 */
+  max-width: 100rem;
+  /* 상자 최대 너비 */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.how-textbox3 .new-goto-link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+.how-textbox3 .new-goto-link:hover {
+  color: #438e07;
+}
+
+
+.how-textbox4 {
+  background-color: rgba(0, 0, 0, 0.11);
+  /* 투명한 초록색 */
+  padding: 4rem;
+  /* 텍스트와 상자의 간격 */
+  width: 100%;
+  /* 상자 너비 */
+  max-width: 100rem;
+  /* 상자 최대 너비 */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.how-textbox4 .price-goto-link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+.how-textbox4 .price-goto-link:hover {
+  color: #ce295b;
+}
+
+.main-title {
+  top: 20%;
+  position: absolute;
+  animation: main_title_animation 1s es;
+}
+
+.main-how {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+.python {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+.python-main {
+  margin-bottom: 4rem;
+}
+
+.python-textbox {
+  background-color: rgba(162, 162, 162, 0.121);
+  /* 투명한 초록색 */
+  padding: 4rem;
+  /* 텍스트와 상자의 간격 */
+  margin: 3rem 0;
+  /* 상자 위아래 여백 */
+  width: 90%;
+  /* 상자 너비 */
+  max-width: 50rem;
+  /* 상자 최대 너비 */
+
+  opacity: 0;
+  /* 처음에는 안보이게 */
+  animation-name: slideDown;
+  /* 애니메이션 이름 설정 */
+  animation-duration: 3s;
+  /* 애니메이션 지속 시간 설정 */
+  animation-fill-mode: forwards;
+  /* 애니메이션 종료 후 마지막 속성값 유지 */
+}
+
+.pricerchart {
+  position: relative;
+  height: 95vh;
+  width: 120vh;
+  z-index: 2;
+}
+
+.maincharttext {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+#PriceRealChart {
+  background-color: white;
+}
+
+.arrow {
+  position: absolute;
+  top: 12rem;
+  /* 원하는 위치에 맞게 조정하세요 */
+  left: 55%;
+  /* 원하는 위치에 맞게 조정하세요 */
+  transform: translateX(-50%);
+  /* 화살표를 가로 중앙에 위치시키기 위해 사용 */
+  animation: fadeEffect 3s infinite;
+  /* 애니메이션 속성 설정 (이 예제에서는 3초 동안 반복) */
+  opacity: 0;
+  /* 초기에는 투명도를 0으로 설정하여 숨김 */
+}
+
+@media screen and (max-width : 780px) {
+  .arrow {
+    display: none;
+  }
+}

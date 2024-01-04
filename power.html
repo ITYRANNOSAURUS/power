@@ -1,0 +1,266 @@
+<!-- Node.js와 Express.js를 이용하여 서버를 구동 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내일의 전기세</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- <script type="module" src="js/powerprice.js"></script>
+    <script type="module" src="js/poweruse.js"></script> -->
+    <link rel="stylesheet" href="css/power.css" />
+</head>
+
+<body>
+    <div class="videoContainer">
+        <!-- 배경 동영상 추가 -->
+        <video playsinline autoplay muted loop id="bgvid" style="
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+        ">
+            <source src="src/background.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <a href="/">
+        <img src="src/logo.svg" alt="Logo" style="
+          position: absolute;
+          top: 0rem;
+          left: 3rem;
+          width: 18rem;
+          height: 10rem;
+          z-index: 10;
+        " />
+    </a>
+
+    <div class="main">
+        <div class="main-title">
+            <h1>
+                미래의 <span class="title-highlight1">에너지 데이터</span>를
+                알아보세요.
+            </h1>
+        </div>
+        <div class="hover">
+            <div class="hover1">
+                <h1>
+                    <a href="powerprice.html">⚡전기 단가 계산기 바로가기 ▶️</a>
+                </h1>
+            </div>
+            <div class="hover2">
+                <h1>
+                    <a href="poweruse.html">💡1인당 전력 사용량 계산기 바로가기 ▶️</a>
+                </h1>
+            </div>
+            <div class="hover3">
+                <h1>
+                    <a href="powerdep.html">✈️에너지 수입의존도 계산기 바로가기 ▶️</a>
+                </h1>
+            </div>
+            <div class="hover4">
+                <h1>
+                    <a href="powernew.html">🌳신재생에너지 계산기 바로가기 ▶️</a>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="videoContainer2">
+        <!-- 배경 동영상 추가 -->
+        <video playsinline autoplay muted loop id="bgvid">
+            <source src="src/sky.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <div class="pricerchart">
+        <div class="maincharttext">
+            <h1>전기 단가는 상승하는 추세를 보이고 있습니다.</h1>
+            <p>1955 ~ 2022</p>
+        </div>
+
+        <div class="arrow" id="upArrow">
+            <img src="src/up-arrow.svg" alt="up-arrow" />
+        </div>
+
+        <div style="
+          width: 60vw;
+          height: 60vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 3rem;
+        ">
+            <!--차트가 그려질 부분-->
+            <canvas id="PriceRealChart"></canvas>
+        </div>
+        <script type="module" src="/js/prChart.js"></script>
+
+        <p>자료 출처 : 전력통계정보시스템</p>
+    </div>
+
+    <div class="image1"></div>
+
+    <div class="how-textbox">
+        <h1><span style="color: #ce2929">전기 단가 상승</span> 문제가</h1>
+        <h1>발생하는 원인에는</h1>
+        <h1 style="margin-bottom: 3rem;">어떤 것이 있을까요?</h1>
+        <h1>
+            <a href="powerprice.html" class="price-goto-link">⚡전기 단가 계산기 바로가기 ▶️</a>
+        </h1>
+    </div>
+
+    <div class="image1"></div>
+
+
+
+    <div class="image2"></div>
+
+    <div class="how-textbox2">
+        <h1>우리나라는<span style="color: #2950ce"> 에너지 수입의존도</span> 가 높아</h1>
+        <h1>에너지 생산 가격이</h1>
+        <h1><span style="color: #b829ce;">국제 유가, 국제 물가</span>의 영향을 많이 받습니다.</h1>
+        <br>
+        <h1><span style="color: #b829ce;">국제 물가 상승</span>에 따라 전기 단가도 지속적으로 상승하고 있습니다.</h1>
+        <br>
+        <p style="margin-bottom: 3rem;">2020년 기준 대한민국 에너지 수입의존도 : 92.8%</p>
+        <h1>
+            <a href="powerdep.html" class="dep-goto-link">✈️에너지 수입의존도 계산기 바로가기 ▶️</a>
+        </h1>
+    </div>
+
+    <div class="image2"></div>
+
+
+    <div class="image3"></div>
+
+    <div class="how-textbox3">
+        <h1>높은 에너지 수입의존도 문제의 해결 방안으로는</h1>
+        <h1><span style="color: #b829ce;">재생에너지</span> 발전 방식이 있습니다.</h1>
+        <br>
+        <h1><span style="color: #b829ce;">풍력, 바이오에너지 등 </span>재생에너지를 활용하면</h1>
+        <h1>화석 연료의 수입을 줄이고</h1>
+        <h1 style="margin-bottom: 3rem;"">지속 가능한 방식으로 전기를 생산할 수 있습니다.</h1>
+        <h1>
+            <a href=" powernew.html" class="new-goto-link">🌳신재생에너지 계산기 바로가기 ▶️</a>
+        </h1>
+    </div>
+
+    <div class="image3"></div>
+
+
+    <div class="image4"></div>
+
+    <div class="how-textbox4">
+        <h1>그렇다면</h1>
+        <h1><span style="color: #ce2929;">전기세 상승</span>을 막고</h1>
+        <h1><span style="color: #2cac02;">지구</span>를 지키기 위해</h1>
+        <h1 style="margin-bottom: 3rem;">변화해 볼까요?</h1>
+        <h1>
+            <a href="powerprice.html" class="price-goto-link">⚡전기 단가 계산기 바로가기 ▶️</a>
+        </h1>
+    </div>
+
+    <div class=" image4">
+    </div>
+
+
+
+    <div class="python">
+        <div class="python-textbox">
+            <div class="python-main">
+                <h1>
+                    <span style="color: rgb(0, 136, 255)">scikit-learn</span>
+                    라이브러리를 사용하여
+                </h1>
+                <h1>
+                    <span style="color: rgb(228, 74, 74)">선형회귀(Linear Regression)</span>
+                    방식으로
+                </h1>
+                <h1>예측을 수행했습니다.</h1>
+            </div>
+            <p style="font-size: 1.2rem">
+                실제 데이터를 바탕으로 <span style="font-weight: bold">2070년</span>까지의
+                예측값을 출력했습니다.
+            </p>
+        </div>
+    </div>
+
+
+
+    <script>
+        //how 효과
+        var isAnimating = false;
+
+        function handleScroll2() {
+            var howElement = document.querySelector(".main-how");
+            var textboxElement = document.querySelector(".how-textbox");
+            var position = howElement.getBoundingClientRect();
+
+            if (position.top <= 100 && position.top >= 80 && !isAnimating) {
+                console.log("2");
+                isAnimating = true;
+                textboxElement.style.animation = "none";
+                setTimeout(function () {
+                    textboxElement.style.animation = "";
+                }, 10);
+                if (!textboxElement.classList.contains("animate")) {
+                    textboxElement.classList.add("animate");
+                }
+            } else if (position.top < 40 || position.top > 60) {
+                textboxElement.classList.remove("animate");
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll2);
+
+        document
+            .querySelector(".how-textbox")
+            .addEventListener("animationend", function () {
+                isAnimating = false;
+            });
+
+        //python 효과
+        var isAnimating = false;
+
+        function handleScroll() {
+            var pythonElement = document.querySelector(".python");
+            var textboxElement = document.querySelector(".python-textbox");
+            var position = pythonElement.getBoundingClientRect();
+
+            if (position.top <= 60 && position.top >= 40 && !isAnimating) {
+                console.log("2");
+                isAnimating = true;
+                textboxElement.style.animation = "none";
+                setTimeout(function () {
+                    textboxElement.style.animation = "";
+                }, 10);
+                if (!textboxElement.classList.contains("animate")) {
+                    textboxElement.classList.add("animate");
+                }
+            } else if (position.top < 40 || position.top > 60) {
+                textboxElement.classList.remove("animate");
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        document
+            .querySelector(".python-textbox")
+            .addEventListener("animationend", function () {
+                isAnimating = false;
+            });
+
+        // JavaScript를 사용하여 특정 이벤트(예: 페이지 로드)에 따라 애니메이션 클래스를 트리거
+        document.addEventListener("DOMContentLoaded", function () {
+            const arrow = document.querySelector(".arrow");
+            arrow.classList.add("animate-arrow");
+        });
+    </script>
+</body>
+
+</html>

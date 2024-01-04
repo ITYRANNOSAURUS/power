@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내일의 전기세</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <!-- <script src="Chart.js"></script> -->
+  <script type="module" src="js/poweruse.js"></script>
+  <link rel="stylesheet" href="css/poweruse.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="/">
+        <img src="src/logo.svg" alt="Logo" style="
+              width: 18rem;
+              height: 10rem;
+              margin-left: 3rem;
+            " />
+      </a>
+    </div>
+
+    <div class="nav-container">
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item1"><a href="/powerprice">전기 단가 계산기</a></li>
+          <li class="nav-item2"><a href="/poweruse">전력 사용량 계산기</a></li>
+          <li class="nav-item3"><a href="/powerdep">수입의존도 계산기</a></li>
+          <li class="nav-item4"><a href="/powernew">신재생에너지 계산기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="use-title">
+    💡미래 <span style="color: #efb806">1인당 전력 사용량</span> 계산기
+  </h1>
+  <p class="use-main">원하시는 연도를 입력하세요.</p>
+  <p class="use-intro">
+    1955년-2022년의 단가는 실제 데이터이고, 2023년-2070년의 단가는 예측
+    데이터입니다.
+  </p>
+  <p class="use-desc">
+    1인당 전력 소비량은 한국 전체 사용 전력을 인구 수로 나눈 자료입니다. (주택용, 산업용 등 모두 포함)
+  </p>
+  <div id="poweruse-container">
+    <div id="input-container">
+      <input type="number" id="poweruse-yearInput" min="0" placeholder="1955년~2070년 사이의 연도만 입력하실 수 있습니다." />
+      <select class="year-dropdown" id="year-dropdown" onchange="updateYearInput()">
+        <script>
+          for (let i = 1955; i <= 2070; i++) {
+            document.write('<option value="' + i + '">' + i + '</option>');
+          }
+        </script>
+      </select>
+      <button onclick="getPowerConsumption()">확인</button>
+    </div>
+    <p id="poweruse-result"></p> <!-- 여기에 결과를 표시합니다. -->
+  </div>
+</body>
+
+
+
+<div style="
+        width: 60vw;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+      ">
+  <!--차트가 그려질 부분-->
+  <canvas id="useChart"></canvas>
+</div>
+
+<div class="python">
+  <div class="python-textbox">
+    <div class="python-main">
+      <h1>
+        <span style="color: rgb(0, 136, 255)">scikit-learn</span>
+        라이브러리를 사용하여
+      </h1>
+      <h1>
+        <span style="color: rgb(228, 74, 74)">선형회귀(Linear Regression)</span>
+        방식으로
+      </h1>
+      <h1>예측을 수행했습니다.</h1>
+    </div>
+    <p style="font-size: 1.2rem">
+      전기 단가, 전력 소비량 계산기의
+      <span style="font-weight: bold">1955년 - 2022년</span> 수치는 실제
+      데이터이고,
+    </p>
+    <p style="font-size: 1.2rem">
+      <span style="font-weight: bold">2023년 - 2070년</span> 수치는
+      예측값입니다.
+    </p>
+  </div>
+</div>
+
+
+
+<script type="module" src="js/uChart.js"></script>
+
+<!-- <h1>미래 1인당 전력 소비량 * 전력 가격 계산기</h1> -->
+</body>
+
+</html>
