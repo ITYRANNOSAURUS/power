@@ -498,6 +498,7 @@ body {
     font-size: 1.3rem;
   }
 
+
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
@@ -554,6 +555,14 @@ body {
     margin-top: 1rem;
   }
 
+  .how-textbox h1 {
+    font-size: 1.2rem;
+  }
+
+  .how-textbox .price-goto-link {
+    font-size: 1.2rem;
+  }
+
   .how-textbox2 h1 {
     font-size: 1rem;
   }
@@ -569,6 +578,15 @@ body {
   .how-textbox3 .new-goto-link {
     font-size: 1rem;
   }
+
+  .how-textbox4 h1 {
+    font-size: 1.2rem;
+  }
+
+  .how-textbox4 .price-goto-link {
+    font-size: 1.2rem;
+  }
+
 
   .python-textbox h1 {
     font-size: 1.2rem;
