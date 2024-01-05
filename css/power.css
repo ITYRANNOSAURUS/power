@@ -1,4 +1,5 @@
 @keyframes fadeEffect {
+
   0%,
   100% {
     opacity: 0;
@@ -33,8 +34,7 @@
 
 @font-face {
   font-family: "GongGothicLight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -167,7 +167,7 @@ body {
 }
 
 .how-textbox {
-  background-color: rgba(239, 6, 64, 0.2);
+  background-color: rgba(239, 177, 6, 0.42);
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
