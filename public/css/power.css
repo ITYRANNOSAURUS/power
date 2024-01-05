@@ -137,10 +137,8 @@ body {
   background-image: url("../src/solar.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .image2 {
@@ -150,10 +148,8 @@ body {
   background-image: url("../src/ship.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .image3 {
@@ -163,10 +159,8 @@ body {
   background-image: url("../src/wind-power.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .image4 {
@@ -176,10 +170,8 @@ body {
   background-image: url("../src/earth.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .how-textbox {
