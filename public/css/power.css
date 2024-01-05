@@ -513,12 +513,13 @@ body {
     animation: none;
   }
 
-  .hover h1 {
+  .hover h1 a {
     font-size: 0.8rem;
-    /* hover 내 h1 요소 폰트 크기 줄임 */
+    /* 폰트 크기 줄임 */
     margin-top: 1rem;
+    /* 상단 여백 설정 */
     margin-bottom: 2rem;
-    /* 하단 여백 줄임 */
+    /* 하단 여백 설정 */
   }
 
   .pricerchart h1 {
