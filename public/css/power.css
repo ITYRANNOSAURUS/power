@@ -77,7 +77,9 @@ body {
   margin-top: 5rem;
 }
 
-.hover h1 {
+.hover h1 a {
+  text-decoration: none;
+  color: black;
   margin-top: 1rem;
   /* 상단 간격 조절 */
   cursor: pointer;
@@ -88,22 +90,22 @@ body {
   margin-bottom: 2rem;
 }
 
-.hover1 h1:hover {
+.hover1 h1 a:hover {
   color: #ce295b;
   /* hover 시 글자 색상 변경 */
 }
 
-.hover2 h1:hover {
+.hover2 h1 a:hover {
   color: #efb806;
   /* hover 시 글자 색상 변경 */
 }
 
-.hover3 h1:hover {
+.hover3 h1 a:hover {
   color: #2950ce;
   /* hover 시 글자 색상 변경 */
 }
 
-.hover4 h1:hover {
+.hover4 h1 a:hover {
   color: #2cac02;
   /* hover 시 글자 색상 변경 */
 }
@@ -115,9 +117,8 @@ body {
 .image1 {
   width: 100%;
   height: 100vh;
-  /* 뷰포트의 높이에 맞게 설정 */
   position: relative;
-  background-image: url("/src/solar.jpg");
+  background-image: url("../src/solar.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -128,7 +129,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("/src/ship.jpg");
+  background-image: url("../src/ship.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -139,7 +140,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("/src/wind-power.jpg");
+  background-image: url("../src/wind-power.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -150,7 +151,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("/src/earth.jpg");
+  background-image: url("../src/earth.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -162,16 +163,17 @@ body {
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vw;
   /* 상자 너비 */
   text-align: center;
 }
 
 .how-textbox .price-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
-  padding-top: 2rem;
 }
 
 .how-textbox .price-goto-link:hover {
@@ -183,15 +185,15 @@ body {
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vw;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
 
 .how-textbox2 .dep-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
@@ -207,13 +209,15 @@ body {
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vw;
   /* 상자 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
 
 .how-textbox3 .new-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
@@ -225,17 +229,19 @@ body {
 }
 
 .how-textbox4 {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 0, 0, 0.073);
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vw;
   /* 상자 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
 
 .how-textbox4 .price-goto-link {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
@@ -308,8 +314,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
 }
 
 #PriceRealChart {
@@ -329,6 +333,7 @@ body {
   opacity: 0;
   /* 초기에는 투명도를 0으로 설정하여 숨김 */
 }
+
 
 /* PC (해상도 1024px)*/
 @media all and (min-width:1024px) {}
@@ -420,7 +425,7 @@ body {
 }
 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-@media all and (max-width:767px) {
+@media all and (min-width:480px) and (max-width:767px) {
   .arrow {
     display: none;
   }
@@ -445,7 +450,7 @@ body {
   }
 
   .hover h1 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     /* hover 내 h1 요소 폰트 크기 줄임 */
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -453,7 +458,7 @@ body {
   }
 
   .pricerchart h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .pricerchart {
@@ -492,5 +497,86 @@ body {
   .how-textbox3 h1 {
     font-size: 1.3rem;
   }
+
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+  .arrow {
+    display: none;
+  }
+
+  .main-title {
+    font-size: 0.7rem;
+    margin-bottom: 3rem;
+    animation: none;
+  }
+
+  .hover h1 {
+    font-size: 0.8rem;
+    /* hover 내 h1 요소 폰트 크기 줄임 */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    /* 하단 여백 줄임 */
+  }
+
+  .pricerchart h1 {
+    font-size: 0.9rem;
+  }
+
+  .pricerchart p {
+    font-size: 0.8rem;
+    z-index: 1;
+  }
+
+  .pricerchart {
+    height: auto;
+    /* 높이를 자동으로 설정하여 내용에 맞게 조절 */
+    margin-top: 1rem;
+    /* 상단 여백 조절 */
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    /* 상하 패딩 추가 */
+  }
+
+  .maincharttext {
+    margin-bottom: 0rem;
+    z-index: 1;
+  }
+
+  .pricerchart {
+    display: contents;
+  }
+
+  #PriceRealChart {
+    width: 100vh;
+    z-index: 1;
+    margin-top: 1rem;
+  }
+
+  .how-textbox2 h1 {
+    font-size: 1rem;
+  }
+
+  .how-textbox2 .dep-goto-link {
+    font-size: 1.2rem;
+  }
+
+  .how-textbox3 h1 {
+    font-size: 1rem;
+  }
+
+  .how-textbox3 .new-goto-link {
+    font-size: 1rem;
+  }
+
+  .python-textbox h1 {
+    font-size: 1.2rem;
+  }
+
+  .python-textbox p {
+    font-size: 1rem;
+  }
+
 
 }
