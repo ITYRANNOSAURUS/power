@@ -1,4 +1,5 @@
 @keyframes fadeEffect {
+
   0%,
   100% {
     opacity: 0;
@@ -33,8 +34,7 @@
 
 @font-face {
   font-family: "GongGothicLight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -116,7 +116,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("/src/light.jpg");
+  background-image: url("/src/solar.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
@@ -165,14 +165,12 @@ body {
 }
 
 .how-textbox {
-  background-color: rgba(239, 6, 64, 0.2);
+  background-color: rgba(239, 177, 6, 0.42);
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
   width: 100%;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
 }
 
@@ -218,8 +216,6 @@ body {
   /* 텍스트와 상자의 간격 */
   width: 100%;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
@@ -242,8 +238,6 @@ body {
   /* 텍스트와 상자의 간격 */
   width: 100%;
   /* 상자 너비 */
-  max-width: 100rem;
-  /* 상자 최대 너비 */
   text-align: center;
   font-size: 0.9rem;
 }
