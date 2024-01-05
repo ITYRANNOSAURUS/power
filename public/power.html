@@ -203,36 +203,6 @@
 
 
     <script>
-        //how 효과
-        var isAnimating = false;
-
-        function handleScroll2() {
-            var howElement = document.querySelector(".main-how");
-            var textboxElement = document.querySelector(".how-textbox");
-            var position = howElement.getBoundingClientRect();
-
-            if (position.top <= 100 && position.top >= 80 && !isAnimating) {
-                console.log("2");
-                isAnimating = true;
-                textboxElement.style.animation = "none";
-                setTimeout(function () {
-                    textboxElement.style.animation = "";
-                }, 10);
-                if (!textboxElement.classList.contains("animate")) {
-                    textboxElement.classList.add("animate");
-                }
-            } else if (position.top < 40 || position.top > 60) {
-                textboxElement.classList.remove("animate");
-            }
-        }
-
-        window.addEventListener("scroll", handleScroll2);
-
-        document
-            .querySelector(".how-textbox")
-            .addEventListener("animationend", function () {
-                isAnimating = false;
-            });
 
         //python 효과
         var isAnimating = false;
