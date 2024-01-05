@@ -468,7 +468,7 @@ body {
   }
 
   .hover h1 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     /* hover 내 h1 요소 폰트 크기 줄임 */
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -476,7 +476,7 @@ body {
   }
 
   .pricerchart h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .pricerchart {
