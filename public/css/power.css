@@ -1,38 +1,3 @@
-@media screen and (max-width: 480px) {
-  .arrow {
-    display: none;
-  }
-}
-
-
-@media screen and (max-width: 780px) {
-  .arrow {
-    display: none;
-  }
-
-  .hover h1 {
-    font-size: 1rem;
-    /* 작은 화면에서 폰트 크기 줄임 */
-    margin-bottom: 1rem;
-    /* 상단과 하단의 여백을 줄임 */
-  }
-
-  .hover1,
-  .hover2,
-  .hover3,
-  .hover4 {
-    text-align: center;
-    /* 텍스트를 중앙 정렬 */
-    padding: 0 10px;
-    /* 좌우 패딩 추가 */
-  }
-}
-
-
-@media screen and (max-width: 1024px) {}
-
-
-
 @keyframes fadeEffect {
 
   0%,
@@ -150,14 +115,13 @@ body {
 .image1 {
   width: 100%;
   height: 100vh;
+  /* 뷰포트의 높이에 맞게 설정 */
   position: relative;
   background-image: url("/src/solar.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .image2 {
@@ -167,10 +131,8 @@ body {
   background-image: url("/src/ship.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .image3 {
@@ -180,10 +142,8 @@ body {
   background-image: url("/src/wind-power.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .image4 {
@@ -193,10 +153,8 @@ body {
   background-image: url("/src/earth.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  /* 원본 이미지 크기의 50%로 설정 */
-  width: 100%;
-  /* div의 너비를 설정합니다 */
+  background-size: cover;
+  /* 이미지가 요소를 완전히 덮도록 조정 */
 }
 
 .how-textbox {
@@ -372,7 +330,98 @@ body {
   /* 초기에는 투명도를 0으로 설정하여 숨김 */
 }
 
-@media screen and (max-width: 780px) {
+/* PC (해상도 1024px)*/
+@media all and (min-width:1024px) {}
+
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+  .arrow {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .hover h1 {
+    font-size: 1.5rem;
+    /* hover 내 h1 요소 폰트 크기 줄임 */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    /* 하단 여백 줄임 */
+  }
+
+  .hover1 {
+    margin-top: 8rem;
+    text-align: center;
+    /* 텍스트를 중앙 정렬 */
+    padding: 0 1rem;
+    /* 좌우 패딩 추가 */
+
+  }
+
+  .hover2,
+  .hover3,
+  .hover4 {
+    text-align: center;
+    /* 텍스트를 중앙 정렬 */
+    padding: 0 1rem;
+    /* 좌우 패딩 추가 */
+  }
+
+  .main {
+    height: auto;
+    /* 높이를 자동으로 설정하여 내용에 맞게 조절 */
+    margin-top: 2rem;
+    /* 상단 여백 조절 */
+    margin-bottom: 5rem;
+    padding: 1rem 0;
+    /* 상하 패딩 추가 */
+  }
+
+  .main-title {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    animation: none;
+  }
+
+  .pricerchart {
+    height: auto;
+    /* 높이를 자동으로 설정하여 내용에 맞게 조절 */
+    margin-top: 1rem;
+    /* 상단 여백 조절 */
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    /* 상하 패딩 추가 */
+  }
+
+  .maincharttext {
+    margin-bottom: 0rem;
+    z-index: 1;
+  }
+
+  .pricerchart {
+    display: contents;
+  }
+
+  .pricerchart p {
+    z-index: 1;
+  }
+
+  #PriceRealChart {
+    width: 100vh;
+    z-index: 1;
+    margin-top: 1rem;
+  }
+
+  .image1 {}
+
+
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width:767px) {
   .arrow {
     display: none;
   }
