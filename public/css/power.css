@@ -355,6 +355,38 @@ body {
   /* 초기에는 투명도를 0으로 설정하여 숨김 */
 }
 
+/* 버튼 */
+
+.btns {
+  display: flex;
+  position: fixed;
+  right: .4rem;
+  bottom: .4rem;
+}
+
+.moveTopBtn {
+  padding: .6rem 1.5rem;
+  background: url('../src/upbtn1.svg') no-repeat center center;
+  background-size: contain;
+  /* 이미지가 div 안에 맞춰지도록 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .2s;
+  width: 50px;
+  /* 버튼의 크기를 지정 */
+  height: 50px;
+  /* 버튼의 크기를 지정 */
+}
+
+.moveTopBtn:hover {
+  background: url('../src/upbtn2.svg') no-repeat center center;
+  background-size: contain;
+  /* 이미지가 div 안에 맞춰지도록 */
+}
+
 
 /* PC (해상도 1024px)*/
 @media all and (min-width:1024px) {}
