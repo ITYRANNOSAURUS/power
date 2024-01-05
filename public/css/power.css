@@ -598,7 +598,7 @@ body {
   }
 
   .hover h1 a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     /* 폰트 크기 줄임 */
     margin-top: 1rem;
     /* 상단 여백 설정 */
