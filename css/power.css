@@ -597,12 +597,16 @@ body {
     animation: none;
   }
 
-  .hover h1 {
+  .hover1 h1,
+  .hover2 h1,
+  .hover3 h1,
+  .hover4 h1 {
     font-size: 0.8rem;
-    /* hover 내 h1 요소 폰트 크기 줄임 */
+    /* 폰트 크기 줄임 */
     margin-top: 1rem;
+    /* 상단 여백 설정 */
     margin-bottom: 2rem;
-    /* 하단 여백 줄임 */
+    /* 하단 여백 설정 */
   }
 
   .pricerchart h1 {
@@ -639,6 +643,14 @@ body {
     margin-top: 1rem;
   }
 
+  .how-textbox h1 {
+    font-size: 1.2rem;
+  }
+
+  .how-textbox .price-goto-link {
+    font-size: 1.2rem;
+  }
+
   .how-textbox2 h1 {
     font-size: 1rem;
   }
@@ -654,6 +666,15 @@ body {
   .how-textbox3 .new-goto-link {
     font-size: 1rem;
   }
+
+  .how-textbox4 h1 {
+    font-size: 1.2rem;
+  }
+
+  .how-textbox4 .price-goto-link {
+    font-size: 1.2rem;
+  }
+
 
   .python-textbox h1 {
     font-size: 1.2rem;
