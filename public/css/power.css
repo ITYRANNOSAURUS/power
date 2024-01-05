@@ -179,7 +179,7 @@ body {
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vh;
   /* 상자 너비 */
   text-align: center;
 }
@@ -201,7 +201,7 @@ body {
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vh;
   /* 상자 너비 */
   text-align: center;
   font-size: 0.9rem;
@@ -225,7 +225,7 @@ body {
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vh;
   /* 상자 너비 */
   text-align: center;
   font-size: 0.9rem;
@@ -249,7 +249,7 @@ body {
   /* 투명한 초록색 */
   padding: 4rem;
   /* 텍스트와 상자의 간격 */
-  width: 100%;
+  width: 100vh;
   /* 상자 너비 */
   text-align: center;
   font-size: 0.9rem;
