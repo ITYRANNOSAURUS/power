@@ -1,3 +1,19 @@
+@media screen and (max-width: 480px) {
+  .arrow {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+  .arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {}
+
+
 @keyframes fadeEffect {
 
   0%,
@@ -342,10 +358,4 @@ body {
   /* 애니메이션 속성 설정 (이 예제에서는 3초 동안 반복) */
   opacity: 0;
   /* 초기에는 투명도를 0으로 설정하여 숨김 */
-}
-
-@media screen and (max-width: 780px) {
-  .arrow {
-    display: none;
-  }
 }
