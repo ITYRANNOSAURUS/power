@@ -197,6 +197,12 @@
     </div>
 
 
+    <div class="btns">
+        <div class="moveTopBtn"></div>
+    </div>
+
+
+
 
     <script>
         //python 효과
@@ -235,6 +241,17 @@
             const arrow = document.querySelector(".arrow");
             arrow.classList.add("animate-arrow");
         });
+
+
+        //버튼
+        const $topBtn = document.querySelector(".moveTopBtn");
+
+        // 버튼 클릭 시 맨 위로 이동
+        $topBtn.onclick = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+
     </script>
 </body>
 
