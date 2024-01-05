@@ -8,6 +8,27 @@ body {
     padding: 0;
 }
 
+::-webkit-scrollbar-track {
+    background-color: #fee9819a;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    background-color: #F5F5F5;
+    ;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.44, rgb(250, 205, 116)),
+            color-stop(0.72, rgb(244, 170, 50)),
+            color-stop(0.86, rgb(247, 170, 5)));
+}
+
 header {
     display: flex;
     justify-content: space-between;
