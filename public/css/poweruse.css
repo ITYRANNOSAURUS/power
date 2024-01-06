@@ -724,13 +724,13 @@ button:hover {
     }
 
     #input-container {
-        width: 80%;
+        width: 70%;
     }
 
 
     #poweruse-yearInput::placeholder {
         font-family: "GongGothicLight", sans-serif;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         color: rgba(0, 0, 0, 0.329);
     }
 
