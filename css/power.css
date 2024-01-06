@@ -477,6 +477,13 @@ body {
     font-size: 1.7rem;
   }
 
+  .btns {
+    right: 4rem;
+    /* 오른쪽 여백을 더 줌 */
+    bottom: 3rem;
+    /* 하단 여백을 더 줌 */
+  }
+
 
 }
 
@@ -562,6 +569,13 @@ body {
     font-size: 1.7rem;
   }
 
+  .btns {
+    right: 4rem;
+    /* 오른쪽 여백을 더 줌 */
+    bottom: 3rem;
+    /* 하단 여백을 더 줌 */
+  }
+
 
 }
 
@@ -637,6 +651,13 @@ body {
 
   .how-textbox3 h1 {
     font-size: 1.3rem;
+  }
+
+  .btns {
+    right: 4rem;
+    /* 오른쪽 여백을 더 줌 */
+    bottom: 3rem;
+    /* 하단 여백을 더 줌 */
   }
 
 }
@@ -735,6 +756,13 @@ body {
 
   .python-textbox p {
     font-size: 1rem;
+  }
+
+  .btns {
+    right: 4rem;
+    /* 오른쪽 여백을 더 줌 */
+    bottom: 3rem;
+    /* 하단 여백을 더 줌 */
   }
 
 
