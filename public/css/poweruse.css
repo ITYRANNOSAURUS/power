@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "GongGothicLight";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -244,7 +251,7 @@ header {
 
 #poweruse-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /* 추가: 아이템들을 수직으로 배열 */
     align-items: center;
     /* 변경: 아이템들을 가운데로 정렬 */
@@ -257,7 +264,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 44%;
     /* 추가: 부모 요소의 전체 너비를 차지하도록 설정 */
 }
 
@@ -327,12 +334,7 @@ button:hover {
     /* 마우스를 올렸을 때 그림자 효과 추가 */
 }
 
-@font-face {
-    font-family: "GongGothicLight";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 /* PC (해상도 1024px)*/
 @media all and (min-width:1024px) {}
