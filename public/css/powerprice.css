@@ -452,7 +452,7 @@ button:hover {
   }
 
   #powerprice-result {
-    max-width: 18rem;
+    width: 25rem;
     font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -593,7 +593,7 @@ button:hover {
   }
 
   #powerprice-result {
-    max-width: 18rem;
+    width: 25rem;
     font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -733,7 +733,7 @@ button:hover {
   }
 
   #powerprice-result {
-    max-width: 18rem;
+    width: 25rem;
     font-size: 0.9rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
