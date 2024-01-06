@@ -220,6 +220,12 @@ header {
   /* 상자 최대 너비 */
 }
 
+.python-textbox p {
+  font-size: 1.2rem;
+  /* 기본 폰트 사이즈 */
+  /* 기타 스타일 */
+}
+
 .year-dropdown {
   /* 변경하고자 하는 스타일 추가 */
   font-size: 16px;
