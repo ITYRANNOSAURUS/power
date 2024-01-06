@@ -243,7 +243,7 @@ header {
 
 #powerdep-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   /* 추가: 아이템들을 수직으로 배열 */
   align-items: center;
   /* 변경: 아이템들을 가운데로 정렬 */
@@ -256,7 +256,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 44%;
   /* 추가: 부모 요소의 전체 너비를 차지하도록 설정 */
 }
 
