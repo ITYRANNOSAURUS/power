@@ -59,15 +59,15 @@
           }
         </script>
       </select>
-      <button onclick="getPowerPrice()">확인</button>
     </div>
-    <p id="powerprice-result"></p> <!-- 여기에 결과를 표시합니다. -->
+    <button onclick="getPowerPrice()">확인</button>
   </div>
-</body>
+  <p id="powerprice-result"></p> <!-- 여기에 결과를 표시합니다. -->
 
 
 
-<div style="
+
+  <div style="
         width: 60vw;
         height: 60vh;
         display: flex;
@@ -75,36 +75,36 @@
         align-items: center;
         margin-top: 3rem;
       ">
-  <!--차트가 그려질 부분-->
-  <canvas id="priceChart"></canvas>
-</div>
-
-<div class="python">
-  <div class="python-textbox">
-    <div class="python-main">
-      <h1>
-        <span style="color: rgb(0, 136, 255)">scikit-learn</span>
-        라이브러리를 사용하여
-      </h1>
-      <h1>
-        <span style="color: rgb(228, 74, 74)">선형회귀(Linear Regression)</span>
-        방식으로
-      </h1>
-      <h1>예측을 수행했습니다.</h1>
-    </div>
-    <p style="font-size: 1.2rem">
-      전기 단가, 전력 소비량 계산기의
-      <span style="font-weight: bold">1955년 - 2022년</span> 수치는 실제
-      데이터이고,
-    </p>
-    <p style="font-size: 1.2rem">
-      <span style="font-weight: bold">2023년 - 2070년</span> 수치는
-      예측값입니다.
-    </p>
+    <!--차트가 그려질 부분-->
+    <canvas id="priceChart"></canvas>
   </div>
-</div>
 
-<script type="module" src="js/pChart.js"></script>
+  <div class="python">
+    <div class="python-textbox">
+      <div class="python-main">
+        <h1>
+          <span style="color: rgb(0, 136, 255)">scikit-learn</span>
+          라이브러리를 사용하여
+        </h1>
+        <h1>
+          <span style="color: rgb(228, 74, 74)">선형회귀(Linear Regression)</span>
+          방식으로
+        </h1>
+        <h1>예측을 수행했습니다.</h1>
+      </div>
+      <p style="font-size: 1.2rem">
+        전기 단가, 전력 소비량 계산기의
+        <span style="font-weight: bold">1955년 - 2022년</span> 수치는 실제
+        데이터이고,
+      </p>
+      <p style="font-size: 1.2rem">
+        <span style="font-weight: bold">2023년 - 2070년</span> 수치는
+        예측값입니다.
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="js/pChart.js"></script>
 </body>
 
 </html>
