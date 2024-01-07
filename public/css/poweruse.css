@@ -733,7 +733,7 @@ button:hover {
     }
 
     #poweruse-result {
-        width: 25rem;
+        max-width: 18rem;
         font-size: 0.9rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
