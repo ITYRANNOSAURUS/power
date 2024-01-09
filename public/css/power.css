@@ -50,6 +50,12 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: #2e7d00;
+  color: #fff;
+}
+
+
 ::-webkit-scrollbar-track {
   background-color: #b4dbff7e;
   border-radius: 10px;
